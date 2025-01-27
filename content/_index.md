@@ -24,7 +24,7 @@ sections:
         color: black
         image:
           # Add your image background to `assets/media/`.
-          filename: stacked-peaks.svg
+          filename: flowers.jpg
           filters:
             brightness: 1.0
           size: cover
@@ -43,17 +43,6 @@ sections:
     design:
       columns: "1"
   - block: collection
-    id: papers
-    content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publication
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
-  - block: collection
     content:
       title: Recent Publications
       text: ""
@@ -63,16 +52,6 @@ sections:
         exclude_featured: false
     design:
       view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - event
-    design:
-      view: article-grid
-      columns: 1
   - block: collection
     id: post
     content:
@@ -102,6 +81,16 @@ sections:
       # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]
+  - block: collection
+    id: talks
+    content:
+      title: Recent & Upcoming Talks
+      filters:
+        folders:
+          - event
+    design:
+      view: article-grid
+      columns: 1
   - block: cta-card
     demo: true # Only display this section in the Hugo Blox Builder demo site
     content:

@@ -35,7 +35,7 @@ profiles:
     url: https://www.linkedin.com/
   - icon: academicons/orcid
     url: https://orcid.org/
-  - icon: arxiv
+  - icon: "custom/arxiv"
     link: https://arxiv.org/user/
 
 interests:
