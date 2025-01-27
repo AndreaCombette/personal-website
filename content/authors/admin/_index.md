@@ -47,25 +47,24 @@ interests:
 
 education:
   - area: Ecole préparatoire aux grandes écoles
-    institution: Stanford University
       institution: Lycée Joffre
       year: 2020-2022
-    summary: |
-      2 years of intensive preparation for the national competitive exam to enter French research-engineering schools.
+      summary: |
+        2 years of intensive preparation for the national competitive exam to enter French research-engineering schools.
   - area: BSE of General Physics
     institution: Ecole Normale Supérieure, Paris
     year: 2023
     summary: |
       Bachelor of Science in General Physics.
-  # - area: Master degree in Physics
-  #     institution: Ecole Normale Supérieure, Paris, Lyon
-  #     year: 2024
-  #   summary: |
 
-  #     Courses included:
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - area: Master degree in Physics
+      institution: Ecole Normale Supérieure, Paris, Lyon
+      year: 2024
+      summary: |
+        Courses included:
+        - lorem ipsum dolor sit amet, consectetur adipiscing elit
+        - lorem ipsum dolor sit amet, consectetur adipiscing elit
+        - lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 work:
   - position: Director of Cloud Infrastructure
