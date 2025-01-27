@@ -68,53 +68,56 @@ education:
 
 work:
   - position: Intern
-    company: IMS
+    company_name: IMS
     company_url: "https://www.ims-bordeaux.fr"
     company_logo: IMS
     location: Bordeaux
     date_start: 2023-06-01
     date_end: 2023-08-01
-    description: |2-
+    summary: |
       Responsibilities include:
-
-      * Analysing
-      * Modelling
-      * Deploying
+      - Analysing
+      - Modelling
+      - Deploying
   - position: Intern
-    company: IPGG (institut pierre Gilles de Gennes)
+   company_name: IPGG (institut pierre Gilles de Gennes)
     company_url: "https://www.institut-pgg.fr"
     company_logo: IPGG
     location: Paris
     date_start: 2023-04-01
     date_end: 2023-05-01
-    description: Electro-Osmosis Filtration with nano-membrane
+    summary: |
+     Electro-Osmosis Filtration with nano-membrane
 
   - position: Intern
-    company: ENS, IBENS
+   company_name: ENS, IBENS
     company_url: "https://www.ens.psl.eu"
     company_logo: ENS
     location: Paris
     date_start: 2023-07-01
     date_end: 2024-02-01
-    description: Spikesorting pipelines, working on Lussac, Exploration of Purkinje’s cells in cerrebelum
+    summary: |
+     Spikesorting pipelines, working on Lussac, Exploration of Purkinje’s cells in cerrebelum
 
   - position: Intern
-    company: ENS, LKB
+   company_name: ENS, LKB
     company_url: "https://www.ens.psl.eu"
     company_logo: ENS
     location: Paris
     date_start: 2023-08-01
     date_end: 2024-02-01
-    description: Spin dynamics in the optical cycle of single nitrogen-vacancy centres in diamond
+    summary: |
+     Spin dynamics in the optical cycle of single nitrogen-vacancy centres in diamond
 
   - position: Intern
-    company: EPFL, Swiss Plasma Center
+   company_name: EPFL, Swiss Plasma Center
     company_url: "https://www.epfl.ch/research/domains/swiss-plasma-center/"
     company_logo: EPFL
     location: Lausanne
     date_start: 2024-02-01
     date_end: 2024-07-20
-    description: Characterization of plasma turbulences using Machine Learning algorithm
+    summary: |
+     Characterization of plasma turbulences using Machine Learning algorithm
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
