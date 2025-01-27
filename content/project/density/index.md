@@ -13,13 +13,8 @@ image:
   focal_point: Smart
 
 links:
-  - icon: twitter
-    icon_pack: fab
-    name: Follow
-    url:
-  - icon: github
-    icon_pack: fab
-    name: Follow
+  - icon: brands/github
+    name: Source
     url: https://github.com/maclalame/MachineLearning
 
 url_code: "https://github.com/maclalame/MachineLearning"

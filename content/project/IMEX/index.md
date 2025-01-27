@@ -17,10 +17,9 @@ image:
   focal_point: Smart
 
 links:
-
 url_code: ""
-url_pdf: "/static/uploads/cr_imex.pdf"
-url_slides: "/static/uploads/presentation_imex.pdf"
+url_pdf: "uploads/cr_imex.pdf"
+url_slides: "uploads/presentation_imex.pdf"
 ---
 
 Use of Machine Learning approach to cluster multiple SpikeSorting Analysis
