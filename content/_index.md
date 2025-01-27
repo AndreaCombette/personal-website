@@ -82,7 +82,7 @@ sections:
       # Page type to display. E.g. post, talk, publication...
       page_type: post
       # Choose how many pages you would like to display (0 = all pages)
-      count: 6
+      count: 3
       # Filter on criteria
       filters:
         author: ""
