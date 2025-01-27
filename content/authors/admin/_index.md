@@ -58,13 +58,13 @@ education:
       Bachelor of Science in General Physics.
 
   - area: Master degree in Physics
-      institution: Ecole Normale Supérieure, Paris, Lyon
-      year: 2024
-      summary: |
-        Courses included:
-        - lorem ipsum dolor sit amet, consectetur adipiscing elit
-        - lorem ipsum dolor sit amet, consectetur adipiscing elit
-        - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    institution: Ecole Normale Supérieure, Paris, Lyon
+    year: 2024
+    summary: |
+      Courses included:
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 work:
   - position: Director of Cloud Infrastructure
