@@ -47,10 +47,10 @@ interests:
 
 education:
   - area: Ecole préparatoire aux grandes écoles
-      institution: Lycée Joffre
-      year: 2020-2022
-      summary: |
-        2 years of intensive preparation for the national competitive exam to enter French research-engineering schools.
+    institution: Lycée Joffre
+    year: 2020
+    summary: |
+      2 years of intensive preparation for the national competitive exam to enter French research-engineering schools.
   - area: BSE of General Physics
     institution: Ecole Normale Supérieure, Paris
     year: 2023
