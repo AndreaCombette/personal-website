@@ -18,7 +18,7 @@ links:
     url: https://github.com/maclalame/MachineLearning
 
 url_code: "https://github.com/maclalame/MachineLearning"
-url_pdf: "/uploads/cr_ML.pdf"
+url_pdf: "uploads/cr_ML.pdf"
 ---
 
 Use of DDPM neural network to generate density fields.

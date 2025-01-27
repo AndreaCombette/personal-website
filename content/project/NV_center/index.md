@@ -28,7 +28,7 @@ links:
     url: https://github.com/Chatr0uge/NV_center
 
 url_code: "https://github.com/Chatr0uge/NV_center"
-url_pdf: "/uploads/cr_TP.pdf"
+url_pdf: "uploads/cr_TP.pdf"
 url_slides: ""
 url_video: ""
 
