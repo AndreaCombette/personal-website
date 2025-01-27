@@ -24,7 +24,7 @@ organizations:
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: CV
+  - icon: "custom/cv"
     link: uploads/CV.pdf
   - icon: at-symbol
     url: "mailto:andrea.combette@ens.psl.eu"
