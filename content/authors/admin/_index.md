@@ -117,52 +117,6 @@ work:
     description: Characterization of plasma turbulences using Machine Learning algorithm
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
-skills:
-  - name: Technical
-    items:
-      - name: Python
-        description: ""
-        percent: 90
-        icon: python
-        icon_pack: fab
-      - name: Data Science
-        description: ""
-        percent: 80
-        icon: chart-line
-        icon_pack: fas
-
-      - name: CSS
-        description: ""
-        percent: 60
-        icon: css3-alt
-        icon_pack: fab
-
-      - name: LateX
-        description: ""
-        percent: 80
-        icon: pen-nib
-        icon_pack: fas
-
-  - name: Hobbies
-    color: "#eeac02"
-    color_border: "#f0bf23"
-    items:
-      - name: Guitar
-        description: ""
-        percent: 80
-        icon: guitar
-        icon_pack: fas
-      - name: Djing
-        description: ""
-        percent: 70
-        icon: record-vinyl
-        icon_pack: fas
-
-      - name: graphic design
-        description: ""
-        percent: 80
-        icon: compass-drafting
-        icon_pack: fas
 
 languages:
   - name: English
