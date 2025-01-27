@@ -1,6 +1,5 @@
 ---
 title: Spikesorting Algorithm and Classification of Purkinje cells
-summary: Use of Machine Learning approach to cluster multiple SpikeSorting Analysis
 tags:
   - Biology
   - Neuroscience
@@ -20,14 +19,8 @@ image:
 links:
 
 url_code: ""
-url_pdf: "/uploads/cr_imex.pdf"
-url_slides: "/uploads/presentation_imex.pdf"
-url_video: ""
-
-# Slides (optional).
-#   Associate this project with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
-slides: ""
+url_pdf: "/static/uploads/cr_imex.pdf"
+url_slides: "/static/uploads/presentation_imex.pdf"
 ---
+
+Use of Machine Learning approach to cluster multiple SpikeSorting Analysis
