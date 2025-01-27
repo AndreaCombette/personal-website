@@ -33,6 +33,8 @@ profiles:
     url: https://www.linkedin.com/
   - icon: academicons/orcid
     url: https://orcid.org/
+  - icon: cv
+    link: uploads/CV.pdf
 
 interests:
   - Artificial Intelligence
