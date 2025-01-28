@@ -44,7 +44,7 @@ sections:
   - block: collection
     id: publication
     content:
-      title: Recent Publications
+      title: Recent Reports & Publications
       text: ""
       filters:
         folders:
