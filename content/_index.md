@@ -15,9 +15,9 @@ sections:
       username: admin
       text: ""
     design:
-      css_class: dark
+      css_class: light
       background:
-        color: black
+        color: white
         image:
           # Add your image background to `assets/media/`.
           filename: flower.jpg
@@ -27,6 +27,8 @@ sections:
           position: center
           parallax: false
           caption: "Image credit: [**Peony, 2017**](James Lahey, Mixed Media on Canvas)"
+          focal_point: Right
+
   - block: markdown
     content:
       title: "📚 My Research"
