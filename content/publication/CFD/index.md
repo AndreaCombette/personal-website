@@ -11,7 +11,7 @@ publishDate: "2025-01-19T00:00:00Z"
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ["article"]
+publication_types: ["report"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Lectures Report ENS Lyon"
@@ -26,7 +26,8 @@ featured: false
 
 url_pdf:
 url_slides:
-
+url_code: "https://github.com/Chatr0uge/lecture_notes_CSP"
+url_source: "https://github.com/Chatr0uge/lecture_notes_CSP/tree/master/src"
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
