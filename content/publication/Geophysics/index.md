@@ -1,7 +1,12 @@
 ---
 title: "Long time Overturn Study in the second phase of the moon cooling using numerical and perturbated Boussinesq equations"
 authors:
+  - Louis Poitevin
   - admin
+author_notes:
+  - "Equal contribution"
+  - "Equal contribution"
+
 date: "2025-01-19T00:00:00Z"
 doi: ""
 
@@ -25,7 +30,7 @@ tags:
 featured: false
 
 url_pdf:
-url_slides:
+url_slides: uploads/slides_publications/GEO_beamer.pdf
 url_code: "https://gitlab.com/LouisPoitevin/magma_ocean"
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
