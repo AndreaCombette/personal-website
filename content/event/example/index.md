@@ -1,28 +1,36 @@
 ---
-title: Example Talk
+title: Short Pulse Reflectometry and Machine Learning
 
-event: Hugo Blox Builder Conference
-event_url: https://example.org
+event: Swiss Plasma Center Seminar
 
-location: Hugo Blox Builder HQ
+location: Swiss Plasma Center, EPFL
 address:
-  street: 450 Serra Mall
-  city: Stanford
-  region: CA
-  postcode: '94305'
-  country: United States
+  city: Lausanne
+  region: VD
+  postcode: '1015'
+  country: Switzerland
 
-summary: An example talk using Hugo Blox Builder's Markdown slides feature.
-abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam.'
+summary: Prediction of the density fluctuation level using
+machine learning applied to the Short Pulse
+Reflectometry data
+abstract: 'This seminar is devoted to investigation of turbulence characteristics in the TCV tokamak using Short
+Pulse Reflectometry diagnostic and Machine Learning approach, focusing on Trapped Electron Mode
+(TEM) instabilities and their impact on radial transport. A 1D model initially provided insights, but a
+2D model was developed to better account for curvature, incidence angle, and scattering effects. Using
+extensive CUWA code simulations, datasets were generated for both Gaussian and power spectrum
+turbulence structures accounting for various simulation parameters like the position of the cut-off the
+structures of turbulences. The 2D model achieved R2 scores of 0.92 for Gaussian and 0.89 for power
+spectrum tests, outperforming deeper neural networks. It effectively managed non-linear effects, delay
+characteristics, and cut-off layer shifts.'
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2030-06-01T13:00:00Z'
-date_end: '2030-06-01T15:00:00Z'
+date: '2024-06-01T13:00:00Z'
+date_end: '2024-06-01T15:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2024-01-01T00:00:00Z'
 
 authors:
   - admin
@@ -42,9 +50,8 @@ image:
 #    name: Follow
 #    url: https://twitter.com/georgecushen
 url_code: 'https://github.com'
-url_pdf: ''
-url_slides: 'https://slideshare.net'
-url_video: 'https://youtube.com'
+url_pdf: 'uploads/SPC_report.pdf'
+url_slides: 'uploads/SPC_beamer.pdf'
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
@@ -63,13 +70,5 @@ projects:
 ---
 
 {{% callout note %}}
-Click on the **Slides** button above to view the built-in slides feature.
+This talk was given at the Swiss Plasma Center Seminar, EPFL, Lausanne, Switzerland by me as a part of my first year of master thesis.
 {{% /callout %}}
-
-Slides can be added in a few ways:
-
-- **Create** slides using Hugo Blox Builder's [_Slides_](https://docs.hugoblox.com/reference/content-types/) feature and link using `slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://docs.hugoblox.com/reference/markdown/).
-
-Further event details, including [page elements](https://docs.hugoblox.com/reference/markdown/) such as image galleries, can be added to the body of this page.

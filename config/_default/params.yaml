@@ -58,3 +58,6 @@ features:
     enable: true
   privacy_pack:
     enable: false
+  syntax_highlighter:
+    theme_light: github-light
+    theme_dark: dracula

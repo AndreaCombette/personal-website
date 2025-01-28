@@ -26,6 +26,7 @@ sections:
           size: cover
           position: center
           parallax: false
+          caption: "Image credit: [**Peony, 2017**](James Lahey, Mixed Media on Canvas)"
   - block: markdown
     content:
       title: "📚 My Research"
