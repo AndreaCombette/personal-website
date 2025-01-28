@@ -34,7 +34,7 @@ profiles:
   - icon: brands/linkedin
     url: https://www.linkedin.com/
   - icon: academicons/orcid
-    url: https://orcid.org/
+    url: https://orcid.org/0009-0004-6918-8520
   - icon: "custom/arxiv"
     link: https://arxiv.org/user/
 
