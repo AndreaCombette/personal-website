@@ -5,3 +5,11 @@
 .dark .avatar-emoji {
   background-color: #fff;
 }
+
+div.prose:nth-child(2) {
+  /* font-style: oblique 0deg; */
+  text-align: justify;
+  font-size: 1.1rem;
+  font-style: oblique 10deg;
+  font-weight: 600;
+}
