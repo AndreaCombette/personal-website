@@ -24,7 +24,7 @@ sections:
         color: black
         image:
           # Add your image background to `assets/media/`.
-          filename: flowers.jpg
+          filename: flower.jpg
           filters:
             brightness: 1.0
           size: cover
