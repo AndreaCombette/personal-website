@@ -14,10 +14,6 @@ sections:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: ""
-      # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/CV.pdf
     design:
       css_class: dark
       background:
@@ -43,6 +39,7 @@ sections:
     design:
       columns: "1"
   - block: collection
+    id: publication
     content:
       title: Recent Publications
       text: ""
@@ -53,7 +50,7 @@ sections:
     design:
       view: citation
   - block: collection
-    id: post
+    id: posts
     content:
       title: Recent Posts
       subtitle: ""
