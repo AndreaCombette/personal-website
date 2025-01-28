@@ -1,5 +1,5 @@
 ---
-title: "Western intensification of the Gulf Stream"
+title: "Applied Computational Physics Stability study of Western intensification processes with Stommel and Munk model"
 authors:
   - admin
 date: "2025-01-19T00:00:00Z"
@@ -14,8 +14,8 @@ publishDate: "2025-01-19T00:00:00Z"
 publication_types: ["article"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Applied Computational Physics Stability study of Western intensification processes with Stommel and Munk model"
-publication_short: "Western intensification stability"
+publication: "Lectures Report ENS Lyon"
+publication_short: ""
 
 abstract: This report is a global view of the stommel and Munk model, where we delve into the western intensification of the Gulf stream. We studied the stability of previous numerical scheme and tried to the stability limits of the Munk model.
 # Summary. An optional shortened abstract.

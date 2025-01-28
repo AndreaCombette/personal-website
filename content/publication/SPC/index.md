@@ -1,5 +1,5 @@
 ---
-title: "Overturn Study in the second phase of the moon cooling"
+title: "Short pule reflectometry data-driven turbulence model for TEM mode in tokamaks "
 authors:
   - admin
 date: "2025-01-19T00:00:00Z"
@@ -14,8 +14,8 @@ publishDate: "2025-01-19T00:00:00Z"
 publication_types: ["article"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Short pule reflectometry data-driven turbulence model for TEM mode in tokamaks "
-publication_short: "data-driven turbulence model"
+publication: "Internship Report SPC"
+publication_short: ""
 
 abstract: This reports is devoted to investigation of turbulence characteristics in the TCV tokamak using Short Pulse Reflectometry diagnostic and Machine Learning approach, focusing on Trapped Electron Mode (TEM) instabilities and their impact on radial transport. A 1D model initially provided insights, but a 2D model was developed to better account for curvature, incidence angle, and scattering effects. Using extensive CUWA code simulations, datasets were generated for both Gaussian and power spectrum turbulence structures accounting for various simulation parameters like the position of the cut-off the structures of turbulences. The 2D model achieved R2 scores of 0.92 for Gaussian and 0.89 for power spectrum tests, outperforming deeper neural networks. It effectively managed non-linear effects, delay characteristics, and cut-off layer shifts.
 # Summary. An optional shortened abstract.
@@ -25,7 +25,7 @@ tags:
 featured: false
 
 url_pdf:
-url_slides:
+url_slides: uploads/Soutenance.pdf
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

@@ -1,5 +1,5 @@
 ---
-title: "Internship Report ENS ulm"
+title: "Neural signal classification"
 authors:
   - admin
 date: "2023-07-07T00:00:00Z"
@@ -14,7 +14,7 @@ publishDate: "2023-09-01T00:00:00Z"
 publication_types: ["article"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Neural signal classification"
+publication: "Internship Report ENS ulm"
 publication_short: ""
 
 abstract: The processing of a neural signal can provide a wealth of information. Knowing which neuron is excited at a given moment, we can understand to a certain extent the language of our brain. The classification of neuronal signals is therefore a key area of neuroscience, enabling us to real-time analysis of cerebral information to trace the motor actions envisaged by the subject.

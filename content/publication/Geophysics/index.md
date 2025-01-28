@@ -1,5 +1,5 @@
 ---
-title: "Overturn Study in the second phase of the moon cooling"
+title: "Long time Overturn Study in the second phase of the moon cooling using numerical and perturbated Boussinesq equations"
 authors:
   - admin
 date: "2025-01-19T00:00:00Z"
@@ -12,10 +12,10 @@ publishDate: "2025-01-19T00:00:00Z"
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
 publication_types: ["article"]
-
 # Publication name and optional abbreviated publication name.
-publication: "Long time Overturn Study in the second phase of the moon cooling using numerical and perturbated Boussinesq equations"
-publication_short: "Long time Overturn Study"
+publication: "Lectures Report ENS Lyon
+"
+publication_short: ""
 
 abstract: We simulated the unstable convection processes unearthed by L.Collin in the second phase of the moon cooling using Dedalus. We unearthed a slow settling of the overturning circulation contradicting previous assumptions in the litterature and we justified that by a perturbation analysis of the governing equations. We also studied the consequences of the thermal profiles and the Raleigh in the strength of the overturning circulation.
 # Summary. An optional shortened abstract.

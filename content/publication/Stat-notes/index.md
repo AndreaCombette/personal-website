@@ -14,7 +14,7 @@ publishDate: "2025-01-19T00:00:00Z"
 publication_types: ["article"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Advanced computational Statistical Physics Lectures notes"
+publication: "Lectures Report ENS Lyon"
 publication_short: ""
 
 abstract: These lectures notes tried to span Integration methods, Monte carlo simulations  applied to finite size system and thermodynamic integration.
