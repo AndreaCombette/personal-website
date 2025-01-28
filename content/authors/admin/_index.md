@@ -140,15 +140,19 @@ skills:
       - name: C++
         description: ""
         percent: 60
-        icon: devicon/cplusplus-plain
+        icon: devicon/cplusplus
       - name: latex
         description: ""
         percent: 80
-        icon: devicon/latex-original
+        icon: devicon/latex
       - name: pypi
         description: ""
         percent: 60
-        icon: devicon/pypi-plain
+        icon: devicon/pypi
+      - name: bash
+        description: ""
+        percent: 60
+        icon: devicon/bash
 
   - name: Hobbies
     color: "#eeac02"
@@ -168,12 +172,12 @@ skills:
         icon: hero/musical-note
 
 languages:
-  - name: English
+  - name: French
     percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+  - name: English
+    percent: 90
+  - name: German
+    percent: 50
 ---
 
 ## About Me
