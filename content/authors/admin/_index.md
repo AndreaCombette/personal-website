@@ -39,9 +39,9 @@ profiles:
     link: https://arxiv.org/user/
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Computational Physics
+  - Machine Learning
+  - Every pretty things
 
 education:
   - area: Ecole préparatoire aux grandes écoles

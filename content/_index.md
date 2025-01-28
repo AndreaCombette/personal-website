@@ -31,13 +31,17 @@ sections:
 
   - block: markdown
     content:
-      title: "📚 My Research"
+      title: "📚 Resume"
       subtitle: ""
       text: |-
         My work has encompassed various projects involving temporal and spatial simulations, with a focus on stochastic and physical phenomena. I will present on this website some important project spanning coarsely the computational physics field. We will delve into solving several kind of PDE for a super large set of physics phenomena, but also into the study of Monte Carlo simulations for modelling quantum of classical systems.
 
         I'm also interest in machine learning. Hence i will try to expose various project in this field, from the study of the biological application to more physical one (SIREN, LTSM, etc.).
         This will span classical regression of classification problem to more complexe one like the study of the GANs/diffusion models.
+
+        {{% callout note %}}
+        This site is still under construction and is maintained and complete during my free time, feel free to contact me if you have any suggestion or question.
+        {{% /callout %}}
 
     design:
       columns: "1"
