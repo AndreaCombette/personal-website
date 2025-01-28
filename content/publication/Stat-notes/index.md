@@ -27,7 +27,7 @@ featured: false
 url_pdf:
 url_slides:
 url_code: "https://github.com/Chatr0uge/lecture_notes_CSP"
-url_source: "https://github.com/Chatr0uge/lecture_notes_CSP/tree/main/src"
+url_source: "https://github.com/Chatr0uge/lecture_notes_CSP/tree/master/src"
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:

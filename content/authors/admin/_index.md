@@ -124,7 +124,7 @@ skills:
       - name: Python
         description: ""
         percent: 80
-        icon: code-bracket
+        icon: link/python
       - name: Data Science
         description: ""
         percent: 100
@@ -133,11 +133,28 @@ skills:
         description: ""
         percent: 40
         icon: circle-stack
+      - name: Pybind11
+        description: ""
+        percent: 60
+        icon: hero/link
+      - name: C++
+        description: ""
+        percent: 60
+        icon: devicon/cplusplus-plain
+      - name: latex
+        description: ""
+        percent: 80
+        icon: devicon/latex-original
+      - name: pypi
+        description: ""
+        percent: 60
+        icon: devicon/pypi-plain
+
   - name: Hobbies
     color: "#eeac02"
     color_border: "#f0bf23"
     items:
-      - name: Hiking
+      - name: Running
         description: ""
         percent: 60
         icon: person-simple-walk
@@ -145,10 +162,10 @@ skills:
         description: ""
         percent: 100
         icon: cat
-      - name: Photography
+      - name: Music
         description: ""
         percent: 80
-        icon: camera
+        icon: hero/musical-note
 
 languages:
   - name: English
