@@ -20,6 +20,14 @@ sections:
     design:
       view: article-grid
       columns: 2
+  - block: markdown
+    content:
+      title: "📚"
+      subtitle: ""
+      text: |-
+        Waiting for this
+    design:
+      columns: "1"
 ---
 
 Waiting for this
