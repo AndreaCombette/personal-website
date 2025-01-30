@@ -34,15 +34,12 @@ sections:
       title: "📚 Resume"
       subtitle: ""
       text: |-
-        My work has encompassed various projects involving temporal and spatial simulations, with a focus on stochastic and physical phenomena. I will present on this website some important project spanning coarsely the computational physics field. We will delve into solving several kind of PDE for a super large set of physics phenomena, but also into the study of Monte Carlo simulations for modelling quantum or classical systems.
+        My work has involved various projects centered on temporal and spatial simulations, with a particular focus on stochastic and physical phenomena. On this website, I will present several significant projects broadly covering the field of computational physics. We will explore the numerical resolution of various types of partial differential equations (PDEs) applied to a wide range of physical phenomena, as well as the use of Monte Carlo simulations for modeling both quantum and classical systems.
 
-        I'm also interest in machine learning. Hence i will try to expose various project in this field, from the study of the biological application to more physical one (SIREN, LTSM, etc.).
-        This will span classical regression of classification problem to more complexe one like the study of the GANs/diffusion models.
-
+        In addition, I have a strong interest in machine learning. Consequently, I will showcase various projects in this field, ranging from biological applications to more physics-oriented topics, such as SIREN and LSTM networks. These projects will cover classical regression and classification problems, as well as more complex topics, including the study of generative adversarial networks (GANs) and diffusion models.
         {{% callout note %}}
         This site is still under construction and is maintained and complete during my free time, feel free to contact me if you have any suggestion or question.
         {{% /callout %}}
-
     design:
       columns: "1"
   - block: collection

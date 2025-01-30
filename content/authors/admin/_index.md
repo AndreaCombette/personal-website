@@ -182,4 +182,4 @@ languages:
 
 ## About Me
 
-I'm a master's physics student at the École Normale Supérieure in Paris, specializing in machine learning and computational physics. Recently, I finished my master's degree at the École Normale Supérieure de Lyon, concentrating on Physics Modeling studies, and I'm currently working on Physics informed neural networks for ocean data reconstruction.
+I am a master's student in physics at the École Normale Supérieure in Paris, specializing in machine learning and computational physics. Recently, I completed my master's degree at the École Normale Supérieure de Lyon, focusing on physics modeling. I am currently working on physics-informed neural networks for ocean data reconstruction.

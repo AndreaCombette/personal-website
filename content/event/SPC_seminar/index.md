@@ -26,7 +26,8 @@ publishDate: "2024-01-01T00:00:00Z"
 authors:
   - admin
 
-tags: []
+tags:
+  [Plasma Physics, Machine Learning, Short Pulse Reflectometry, TCV, Turbulence]
 
 # Is this a featured talk? (true/false)
 featured: false
