@@ -1,6 +1,5 @@
 ---
-title: Numerical Investigation of Western Boundary
-Current Intensification
+title: Numerical Investigation of Western Boundary Current Intensification
 
 event: ENS Lyon Colloquium
 
@@ -27,7 +26,14 @@ publishDate: "2025-01-30T00:00:00Z"
 authors:
   - admin
 
-tags: [Oceanography, Fluid Dynamics, Western Boundary Currents, Numerical Simulation, finite difference]
+tags:
+  [
+    Oceanography,
+    Fluid Dynamics,
+    Western Boundary Currents,
+    Numerical Simulation,
+    finite difference,
+  ]
 
 # Is this a featured talk? (true/false)
 featured: false
