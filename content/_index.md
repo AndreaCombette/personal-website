@@ -31,7 +31,7 @@ sections:
 
   - block: markdown
     content:
-      title: "📚 Resume"
+      title: "📚 About 📚"
       subtitle: ""
       text: |-
         My work has involved various projects centered on temporal and spatial simulations, with a particular focus on stochastic and physical phenomena. On this website, I will present several significant projects broadly covering the field of computational physics. We will explore the numerical resolution of various types of partial differential equations (PDEs) applied to a wide range of physical phenomena, as well as the use of Monte Carlo simulations for modeling both quantum and classical systems.

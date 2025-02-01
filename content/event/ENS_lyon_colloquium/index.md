@@ -47,8 +47,8 @@ image:
 #    name: Follow
 #    url: https://twitter.com/georgecushen
 url_code: "https://github.com"
-url_pdf: "content/publication/CFD/CFD.pdf"
-url_slides: "uploads/slides/CFD_beamer.pdf"
+url_pdf: "uploads/CFD.pdf"
+url_slides: "uploads/slides_publications/CFD_beamer.pdf"
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.

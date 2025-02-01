@@ -41,7 +41,7 @@ profiles:
 interests:
   - Computational Physics
   - Machine Learning
-  - Every pretty things
+  - All pretty things
 
 education:
   - area: Ecole préparatoire aux grandes écoles
