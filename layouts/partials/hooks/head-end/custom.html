@@ -52,25 +52,25 @@
   // Define a simple planet simulation with a central star and orbiting planets
   const planets = [
     {
-      orbitRadius: 80,
-      size: 8,
+      orbitRadius: 100,
+      size: 5,
       speed: 0.02,
       angle: Math.random() * Math.PI * 2,
-      color: '#FF4500' // A red-orange planet
+      color: '#991315' // A red-orange planet
     },
     {
-      orbitRadius: 150,
-      size: 12,
+      orbitRadius: 180,
+      size: 10,
       speed: 0.015,
       angle: Math.random() * Math.PI * 2,
-      color: '#1E90FF' // A blue planet
+      color: '#ba676c' // A blue planet
     },
     {
-      orbitRadius: 220,
-      size: 10,
+      orbitRadius: 270,
+      size: 8,
       speed: 0.012,
       angle: Math.random() * Math.PI * 2,
-      color: '#32CD32' // A green planet
+      color: '#dc2626' // A green planet
     }
   ];
 
@@ -85,8 +85,8 @@
 
     // Draw the central star
     ctx.beginPath();
-    ctx.arc(centerX, centerY, 20, 0, Math.PI * 2);
-    ctx.fillStyle = 'yellow';
+    ctx.arc(centerX, centerY, 13, 0, Math.PI * 2);
+    ctx.fillStyle = '#fee2e2';
     ctx.fill();
 
     // For each planet, update its position and draw its orbit and the planet itself
@@ -101,7 +101,7 @@
       // (Optional) Draw the orbit path for a minimal guide
       ctx.beginPath();
       ctx.arc(centerX, centerY, planet.orbitRadius, 0, Math.PI * 2);
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)';
       ctx.lineWidth = 1;
       ctx.stroke();
 
