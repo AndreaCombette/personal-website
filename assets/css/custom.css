@@ -28,7 +28,7 @@ div.prose:nth-child(2) {
 /* Style the simulation canvas */
 #planetCanvas {
   position: absolute;
-  top: 5%;
+  top: 0;
   right: 0;
   width: 35%;  /* Adjust width as desired */
   height: 35%; /* Adjust height as desired */
