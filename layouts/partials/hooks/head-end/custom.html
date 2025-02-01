@@ -17,10 +17,11 @@
   canvas.style.position = "absolute";
   canvas.style.top = "0";
   canvas.style.right = "0";
-  canvas.style.width = "300px";  // Adjust width as needed
-  canvas.style.height = "300px"; // Adjust height as needed
+  canvas.style.width = "25%";  // Adjust width as needed
+  canvas.style.height = "25%"; // Adjust height as needed
   canvas.style.pointerEvents = "none"; // Allow interactions with underlying elements
   canvas.style.backgroundColor = "transparent"; // Make the canvas transparent
+  canvas.style.zIndex = "-1"; // Ensure the canvas is above other elements
   // Ensure the parent container is positioned relative (if not already)
   container.style.position = "relative";
 
