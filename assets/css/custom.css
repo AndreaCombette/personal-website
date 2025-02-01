@@ -21,9 +21,4 @@ div.prose:nth-child(2) {
   color: #e53e3e; /* For example, change to a vibrant red on hover */
 }
 
-/* Ensure the container is positioned relative for absolute positioning inside */
-.home-section-bg.bg-image {
-  position: relative;
-  overflow: hidden; /* Hide any overflow from the stickman animation */
-}
 
