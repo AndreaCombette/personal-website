@@ -1,56 +1,42 @@
 <script> document.addEventListener("DOMContentLoaded", function () {
   // Find the target container by its classes.
-  // The colon in "dark:text-white" is escaped with a backslash if needed.
   const container = document.querySelector('.home-section-bg.bg-image');
-
   if (!container) {
-    console.error("Target container not found.");
+    console.error("Container with class '.home-section-bg.bg-image' not found.");
     return;
   }
 
-  // Create a canvas element
+  // Create a canvas element for the simulation.
   const canvas = document.createElement("canvas");
   canvas.id = "planetCanvas";
 
-  // Apply inline styles so it sits in the top right corner.
-  // Alternatively, you can use CSS if you prefer.
-  canvas.style.position = "absolute";
-  canvas.style.top = "0";
-  canvas.style.right = "0";
-  canvas.style.width = "25%";  // Adjust width as needed
-  canvas.style.height = "25%"; // Adjust height as needed
-  canvas.style.pointerEvents = "none"; // Allow interactions with underlying elements
-  canvas.style.backgroundColor = "transparent"; // Make the canvas transparent
-  canvas.style.zIndex = "-1"; // Ensure the canvas is above other elements
-  // Ensure the parent container is positioned relative (if not already)
-  container.style.position = "relative";
+  // Prepend the canvas so it appears behind any other content (text) within the container.
+  container.prepend(canvas);
 
-  // Append the canvas to the container
-  container.appendChild(canvas);
-
-  // Now run the planet simulation code on the canvas
+  // Initialize the planet simulation on the newly added canvas.
   initPlanetSimulation();
 });
+
 function initPlanetSimulation() {
   const canvas = document.getElementById('planetCanvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  // Set the canvas dimensions based on its offset sizes
+  // Set the canvas dimensions based on its CSS size
   let width = canvas.width = canvas.offsetWidth;
   let height = canvas.height = canvas.offsetHeight;
 
-  // Update canvas dimensions on window resize, if needed
+  // Optionally, update canvas dimensions on window resize
   window.addEventListener('resize', function () {
     width = canvas.width = canvas.offsetWidth;
     height = canvas.height = canvas.offsetHeight;
   });
 
-  // Calculate the center of the canvas (for our simulation)
-  const centerX = width ;
+  // Define the center of the simulation within the canvas
+  const centerX = width / 2;
   const centerY = height / 2;
 
-  // Define some planets with orbit properties
+  // Define some minimalistic planets with orbit parameters
   const planets = [
     {
       orbitRadius: 40,
@@ -75,7 +61,7 @@ function initPlanetSimulation() {
     }
   ];
 
-  // Draw and animate the simulation
+  // Function to update and draw the simulation
   function draw() {
     // Clear the canvas
     ctx.clearRect(0, 0, width, height);
@@ -86,19 +72,19 @@ function initPlanetSimulation() {
     ctx.fillStyle = 'yellow';
     ctx.fill();
 
-    // For each planet, update its position and draw its orbit and planet
+    // Draw each planet and its orbit
     planets.forEach(planet => {
-      // Update planet angle
+      // Update the planet's angle for orbiting
       planet.angle += planet.speed;
 
-      // Calculate planet position relative to the center
+      // Calculate the planet's position relative to the center
       const x = centerX + planet.orbitRadius * Math.cos(planet.angle);
       const y = centerY + planet.orbitRadius * Math.sin(planet.angle);
 
-      // (Optional) Draw the orbit path (faint circle)
+      // (Optional) Draw a faint orbit path
       ctx.beginPath();
       ctx.arc(centerX, centerY, planet.orbitRadius, 0, Math.PI * 2);
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
       ctx.lineWidth = 1;
       ctx.stroke();
 
@@ -116,4 +102,5 @@ function initPlanetSimulation() {
   // Start the simulation
   draw();
 }
+
 </script>
