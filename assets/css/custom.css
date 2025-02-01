@@ -28,10 +28,10 @@ div.prose:nth-child(2) {
 /* Style the simulation canvas */
 #planetCanvas {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 25%;  /* Adjust width as desired */
-  height: 25%; /* Adjust height as desired */
+  top: 5%;
+  right: 5%;
+  width: 30%;  /* Adjust width as desired */
+  height: 30%; /* Adjust height as desired */
   z-index: 1;    /* Lower than the text that comes later in the DOM */
   pointer-events: none;
   background-color: transparent; /* So it doesn’t interfere with user interactions */
