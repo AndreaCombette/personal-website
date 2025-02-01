@@ -27,31 +27,3 @@ div.prose:nth-child(2) {
   overflow: hidden; /* Hide any overflow from the stickman animation */
 }
 
-/* Create the stickman using a pseudo-element */
-.home-section-bg.bg-image::after {
-  content: "";
-  position: absolute;
-  bottom: 0;  /* Align to the bottom of the container */
-  left: -60px; /* Start slightly off-screen on the left */
-  width: 60px;  /* Adjust the stickman width as needed */
-  height: 90px; /* Adjust the stickman height as needed */
-
-  /* Inline SVG of a simple white stickman */
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><circle cx='50' cy='20' r='10' stroke='white' stroke-width='2' fill='none'/><line x1='50' y1='30' x2='50' y2='80' stroke='white' stroke-width='2'/><line x1='50' y1='40' x2='30' y2='60' stroke='white' stroke-width='2'/><line x1='50' y1='40' x2='70' y2='60' stroke='white' stroke-width='2'/><line x1='50' y1='80' x2='30' y2='110' stroke='white' stroke-width='2'/><line x1='50' y1='80' x2='70' y2='110' stroke='white' stroke-width='2'/></svg>");
-
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  /* Animate the stickman running */
-  animation: runStickman 10s linear infinite;
-}
-
-/* Keyframes to move the stickman from left to right */
-@keyframes runStickman {
-  0% {
-    left: -60px; /* Start offscreen to the left */
-  }
-  100% {
-    left: 100%;  /* End past the right edge */
-  }
-}
