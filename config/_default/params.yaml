@@ -61,6 +61,3 @@ features:
   syntax_highlighter:
     theme_light: github-light
     theme_dark: dracula
-
-custom_js:
-  - js/custom.js
