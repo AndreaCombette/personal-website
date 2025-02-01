@@ -33,27 +33,27 @@ function initPlanetSimulation() {
   });
 
   // Define the center of the simulation within the canvas
-  const centerX = width * 0.75;
-  const centerY = height / 2;
+  const centerX = width * 0.8;
+  const centerY = height *0.8;
 
   // Define some minimalistic planets with orbit parameters
   const planets = [
     {
-      orbitRadius: 40,
+      orbitRadius: 60,
       size: 5,
       speed: 0.03,
       angle: Math.random() * Math.PI * 2,
       color: '#ffffff' // Red-orange planet
     },
     {
-      orbitRadius: 70,
+      orbitRadius: 100,
       size: 7,
       speed: 0.02,
       angle: Math.random() * Math.PI * 2,
       color: '#ffffff' // Blue planet
     },
     {
-      orbitRadius: 100,
+      orbitRadius: 170,
       size: 6,
       speed: 0.015,
       angle: Math.random() * Math.PI * 2,
@@ -78,8 +78,8 @@ function initPlanetSimulation() {
       planet.angle += planet.speed;
 
       // Calculate the planet's position relative to the center
-      const x = centerX + planet.orbitRadius * Math.cos(planet.angle);
-      const y = centerY + planet.orbitRadius * Math.sin(planet.angle);
+      const x = centerX + planet.orbitRadius * Math.cos(2 * planet.angle);
+      const y = centerY + planet.orbitRadius * Math.sin(3 * planet.angle);
 
       // (Optional) Draw a faint orbit path
       ctx.beginPath();
