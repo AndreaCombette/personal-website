@@ -30,8 +30,8 @@ div.prose:nth-child(2) {
   position: absolute;
   top: 0;
   right: 0;
-  width: 35%;  /* Adjust width as desired */
-  height: 35%; /* Adjust height as desired */
+  width: 50%;  /* Adjust width as desired */
+  height: 50%; /* Adjust height as desired */
   z-index: 1;    /* Lower than the text that comes later in the DOM */
   pointer-events: none;
   background-color: transparent; /* So it doesn’t interfere with user interactions */
