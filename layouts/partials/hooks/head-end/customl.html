@@ -18,7 +18,7 @@
   // Loop through each character and wrap it in a span.
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
-    if (char === " ") {
+    if (char === " " || char === "📚") {
       // Preserve spaces
       element.innerHTML += " ";
     } else {
