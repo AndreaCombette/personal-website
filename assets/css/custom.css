@@ -59,3 +59,17 @@ div.prose:nth-child(2) {
   color: rgb(209 213 219/var(--tw-text-opacity));
   font-family: "Harding Text Web Bold Regular";
 }
+
+::after, ::before {
+  --tw-content: "";
+
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0/var(--tw-text-opacity));
+  font-family: "Harding Text Web Bold Regular";
+
+}
