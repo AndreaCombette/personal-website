@@ -38,7 +38,7 @@ div.prose:nth-child(2) {
 }
 @font-face {
   font-family: 'Harding';
-  src: url('static/fonts/Harding.ttf') format('truetype');
+  src: url('fonts/Harding.ttf') format('truetype');
   font-weight: 800; /* This weight matches your .font-bold definition */
   font-style: normal;
 }
