@@ -36,3 +36,14 @@ div.prose:nth-child(2) {
   pointer-events: none;
   background-color: transparent; /* So it doesn’t interfere with user interactions */
 }
+@font-face {
+  font-family: 'Harding';
+  src: url('/fonts/Harding.ttf') format('truetype');
+  font-weight: 800; /* This weight matches your .font-bold definition */
+  font-style: normal;
+}
+
+.font-bold {
+  font-weight: 800;
+  font-family: "Harding", sans-serif; /* Include a fallback like sans-serif */
+}
