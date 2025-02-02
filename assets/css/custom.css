@@ -50,21 +50,6 @@ div.prose:nth-child(2) {
   font-weight: 800;
   font-family: "Harding Text Web Bold Regular"; /* Include a fallback like sans-serif */
 }
-.font-semibold {
-  font-weight: 600;
-  font-family: "Harding Text Web Bold Regular"; /* Include a fallback like sans-serif */
-}
-:is(.dark .dark\:text-gray-300) {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219/var(--tw-text-opacity));
-  font-family: "Harding Text Web Bold Regular";
-}
-
-::after, ::before {
-  --tw-content: "";
-
-}
-
 .navbar-brand {
   font-size: 1.25rem;
   font-weight: 600;
@@ -73,6 +58,6 @@ div.prose:nth-child(2) {
   font-family: "Harding Text Web Bold Regular";
 
 }
-.nav-link {
+.section-subheading {
   font-family: "Harding Text Web Bold Regular";
 }
