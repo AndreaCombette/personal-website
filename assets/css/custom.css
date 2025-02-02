@@ -61,3 +61,6 @@ div.prose:nth-child(2) {
 .section-subheading {
   font-family: "Harding Text Web Bold Regular";
 }
+.prose :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  font-family: "Harding Text Web Bold Regular";
+}
