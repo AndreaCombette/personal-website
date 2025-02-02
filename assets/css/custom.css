@@ -36,7 +36,15 @@ div.prose:nth-child(2) {
   pointer-events: none;
   background-color: transparent; /* So it doesn’t interfere with user interactions */
 }
-@import url(https://db.onlinewebfonts.com/c/b9f30d2f67a2115cbb54208678b9ac66?family=Harding+Text+Web+Bold+Regular);
+@font-face {
+  font-family: "Harding Text Web Bold Regular";
+  src: url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.eot");
+  src: url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.svg#Harding Text Web Bold Regular")format("svg");
+}
 
 .font-bold {
   font-weight: 800;
