@@ -21,10 +21,6 @@ sections:
         image:
           # Add your image background to `assets/media/`.
           filename: test6.png
-          filters:
-            blur: 5px
-            contrast: 0.8
-
           size: cover
           position: center
           parallax: false
