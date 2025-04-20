@@ -30,9 +30,9 @@ profiles:
     url: "mailto:andrea.combette@ens.psl.eu"
     label: E-mail Me
   - icon: brands/github
-    url: https://github.com/gcushen
+    url: https://github.com/Chatr0uge
   - icon: brands/linkedin
-    url: https://www.linkedin.com/
+    url: https://www.linkedin.com/in/andrea-combette-37a330235/
   - icon: academicons/orcid
     url: https://orcid.org/0009-0004-6918-8520
   - icon: "custom/arxiv"
@@ -41,7 +41,7 @@ profiles:
 interests:
   - Computational Physics
   - Machine Learning
-  - All pretty things
+  - Every pretty little things
 
 education:
   - area: Ecole préparatoire aux grandes écoles
