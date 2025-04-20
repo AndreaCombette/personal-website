@@ -70,4 +70,13 @@ div.prose:nth-child(2) {
 
 .bio-text > p:nth-child(2) {
   text-align: justify;
+  font-style: bold;
+  color: white;
 }
+:is(.dark .dark\:text-gray-300) {
+  --tw-text-opacity: 1;
+  color: rgb(255, 255, 255);
+}
+.bg-image {
+  filter: blur(5px) contrast(0.8);
+  }
