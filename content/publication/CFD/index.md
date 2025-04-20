@@ -55,4 +55,4 @@ projects:
 slides:
 ---
 
-{{< gdocs src="https://slides.com/iphysresearch/journal_club_20201020/embed" scrolling="no" >}}
+<iframe src="https://slides.com/iphysresearch/journal_club_20201020/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
