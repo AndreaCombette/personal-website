@@ -55,4 +55,4 @@ projects:
 slides:
 ---
 
-<iframe src="https://github.com/Chatr0uge/personal-website/blob/main/content/publication/CFD/CFD.pdf" style="width: 100%; height: 600px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
+<iframe src="https://andrea-combette.com/publication/nv_center/NV_center.pdf" style="width: 100%; height: 600px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
