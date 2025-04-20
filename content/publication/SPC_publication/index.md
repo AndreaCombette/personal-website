@@ -5,7 +5,7 @@ authors:
   - Stephan Brunner
   - Stefano Coda
   - admin
-date: "2025-04-1500:00:00Z"
+date: "2025-04-15T00:00:00Z"
 doi: "10.1088/1361-6587/adcd2a"
 
 # Schedule page publish date (NOT publication's date).
