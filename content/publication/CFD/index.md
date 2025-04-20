@@ -60,7 +60,7 @@ slides:
   src="CFD.pdf"
   style="
     width: 100%;
-    height: 600px;
+    height: 800px;
     border: 5px solid #000;      /* black border, 5px thick */
     border-radius: 12px;         /* rounded corners */
     overflow: hidden;            /* clip any overflowing PDF content */
