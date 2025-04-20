@@ -55,4 +55,4 @@ projects:
 slides:
 ---
 
-<iframe src="https://personal.math.vt.edu/embree/math5466/lecture3.pdf" style="width: 100%; height: 600px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
+<iframe src="https://andrea-combette.com/uploads/CFD.pdf" style="width: 100%; height: 600px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
