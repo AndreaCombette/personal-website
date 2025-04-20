@@ -77,6 +77,6 @@ div.prose:nth-child(2) {
   --tw-text-opacity: 1;
   color: rgb(255, 255, 255);
 }
-.bg-image {
+.home-section-bg.bg-image {
   filter: blur(5px) contrast(0.8);
   }
