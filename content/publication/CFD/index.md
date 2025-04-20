@@ -56,4 +56,4 @@ slides:
 ---
 
 
-<iframe src="uploads/CFD.pdf" style="width: 100%; height: 600px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
+<iframe src="CFD.pdf" style="width: 100%; height: 600px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
