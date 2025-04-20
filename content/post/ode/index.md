@@ -27,6 +27,7 @@ u'(t)=f(t,u(t)),\ t>0,\\
 u(0) = u_0,
 \end{cases}
 $$
+{{< /math >}}
 where $u$ typically takes values in $\mathbb{R}^d$. Our examples rely on <tt>numpy</tt> and <tt>matplotlib</tt>:
 
 ```python
