@@ -54,3 +54,5 @@ projects:
 #   Otherwise, set `slides: ""`.
 slides:
 ---
+
+{{< gdocs src="https://slides.com/iphysresearch/journal_club_20201020/embed" scrolling="no" >}}
