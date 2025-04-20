@@ -20,7 +20,7 @@ sections:
         color: white
         image:
           # Add your image background to `assets/media/`.
-          filename: test6.png
+          filename: flower.jpg
           size: cover
           position: center
           parallax: false
