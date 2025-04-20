@@ -21,7 +21,10 @@ abstract: These lectures notes tried to span Integration methods, Monte carlo si
 # Summary. An optional shortened abstract.
 summary:
 tags:
-  - Source Themes
+  - Sciences
+  - Statistical Physics
+  - Numerical Method
+  - Monte Carlo simulations
 featured: false
 
 url_pdf:

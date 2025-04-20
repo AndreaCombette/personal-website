@@ -21,7 +21,7 @@ abstract: The processing of a neural signal can provide a wealth of information.
 # Summary. An optional shortened abstract.
 summary:
 tags:
-  - Source Themes
+  - Sciences
 featured: false
 
 url_pdf:

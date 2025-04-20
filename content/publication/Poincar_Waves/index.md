@@ -22,7 +22,10 @@ abstract: Chebyshev method to study equatorial propagating poincaré waves
 # Summary. An optional shortened abstract.
 summary:
 tags:
-  - Source Themes
+  - Sciences
+  - Numerical Method
+  - Spectral Methods
+  - Fluid dynamics
 featured: false
 
 url_code: "https://github.com/maclalame/Poincar-Waves"

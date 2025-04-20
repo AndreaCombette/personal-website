@@ -21,7 +21,11 @@ abstract: This report is a global view of the stommel and Munk model, where we d
 # Summary. An optional shortened abstract.
 summary:
 tags:
-  - Source Themes
+  - Sciences
+  - Meteorology
+  - Numerical Method
+  - Finite difference
+  - Fluid Dynamics
 featured: false
 
 url_pdf:

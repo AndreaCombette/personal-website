@@ -21,7 +21,10 @@ abstract: This reports is devoted to investigation of turbulence characteristics
 # Summary. An optional shortened abstract.
 summary:
 tags:
-  - Source Themes
+  - Sciences
+  - Plasma Physics
+  - Numerical Method
+
 featured: false
 
 url_pdf:
