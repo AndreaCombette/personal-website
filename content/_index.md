@@ -23,6 +23,9 @@ sections:
           filename: test6.png
           filters:
             brightness: 1.0
+            blur: 5px
+            contrast: 0.8
+
           size: cover
           position: center
           parallax: false
