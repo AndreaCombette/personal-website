@@ -20,6 +20,7 @@ image:
 A general technique for solving problems with partial differential equations (PDEs) that involve a time variable $t$ and one or more space variables is the so-called [method of lines](https://en.wikipedia.org/wiki/Method_of_lines). This approach discretizes the spatial derivatives, leaving the time variable continuous, reducing the PDE to a system of ordinary differential equations (ODEs). One then tackles the resulting Cauchy problem for the ODEs using standard numerical methods. Most modern ODE solvers offer convenience and flexibility, especially for one-dimensional spatial problems.
 
 Here, we review widely used methods for basic Cauchy problems:
+
 {{< math >}}
 $$
 \begin{cases}
@@ -53,6 +54,8 @@ R'(t)&=a\,I(t),
 \end{align*}
 \right.\ t>0,
 $$
+{{< /math >}}
+
 with initial data $S(0)=S_0,\ I(0)=I_0,\ R(0)=R_0$. Below, we use:
 $$
 S_0=762,\ I_0=1,\ R_0=0,\ r=0.00218,\ a=0.44036,\ T=14.
