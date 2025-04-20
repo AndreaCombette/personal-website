@@ -79,5 +79,5 @@ div.prose:nth-child(2) {
   color: rgb(255, 255, 255);
 }
 .bg-image {
-  filter: blur(5px) contrast(0.8);
+  filter: blur(3px) contrast(0.85);
   }
