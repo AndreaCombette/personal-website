@@ -14,7 +14,6 @@ div.prose:nth-child(2) {
   font-weight: 600;
 }
 
-
 /* Hover effect on each letter */
 .mb-6.text-3xl.font-bold.text-gray-900.dark\:text-white span:hover {
   transform: scale(1.5) rotate(15deg);
@@ -30,20 +29,25 @@ div.prose:nth-child(2) {
   position: relative;
   top: 0;
   right: 0;
-  width: 100%;  /* Adjust width as desired */
+  width: 100%; /* Adjust width as desired */
   height: 100%; /* Adjust height as desired */
-  z-index: 1;    /* Lower than the text that comes later in the DOM */
+  z-index: 1; /* Lower than the text that comes later in the DOM */
   pointer-events: none;
   background-color: transparent; /* So it doesn’t interfere with user interactions */
 }
 @font-face {
   font-family: "Harding Text Web Bold Regular";
   src: url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.eot");
-  src: url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.svg#Harding Text Web Bold Regular")format("svg");
+  src: url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.svg#Harding Text Web Bold Regular")
+      format("svg");
 }
 
 .font-bold {
@@ -54,13 +58,16 @@ div.prose:nth-child(2) {
   font-size: 1.25rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(0 0 0/var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
   font-family: "Harding Text Web Bold Regular";
-
 }
 .section-subheading {
   font-family: "Harding Text Web Bold Regular";
 }
 .prose :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   font-family: "Harding Text Web Bold Regular";
+}
+
+.bio-text > p:nth-child(2) {
+  text-align: justify;
 }
