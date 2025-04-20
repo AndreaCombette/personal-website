@@ -55,4 +55,4 @@ projects:
 slides:
 ---
 
-<embed src="/uploads/CFD.pdf" width="1000" height="800" frameborder="0" allowfullscreen>
+<embed src="CFD.pdf" width="1000" height="800" frameborder="0" allowfullscreen>
