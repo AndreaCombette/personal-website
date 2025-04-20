@@ -22,7 +22,6 @@ sections:
           # Add your image background to `assets/media/`.
           filename: test6.png
           filters:
-            brightness: 1.0
             blur: 5px
             contrast: 0.8
 
