@@ -1,19 +1,14 @@
 <script> document.addEventListener("DOMContentLoaded", function () {
-  // Find the target container by its classes.
   const container = document.querySelector('.home-section-bg.bg-image');
   if (!container) {
     console.error("Container with class '.home-section-bg.bg-image' not found.");
     return;
   }
 
-  // Create a canvas element for the simulation.
   const canvas = document.createElement("canvas");
   canvas.id = "planetCanvas";
-
-  // Prepend the canvas so it appears behind any other content (text) within the container.
   container.prepend(canvas);
 
-  // Initialize the planet simulation on the newly added canvas.
   initPlanetSimulation();
 });
 
@@ -22,49 +17,46 @@ function initPlanetSimulation() {
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  // Set the canvas dimensions based on its CSS size
   let width = canvas.width = canvas.offsetWidth;
   let height = canvas.height = canvas.offsetHeight;
 
-  // Optionally, update canvas dimensions on window resize
   window.addEventListener('resize', function () {
     width = canvas.width = canvas.offsetWidth;
     height = canvas.height = canvas.offsetHeight;
+    // Recalculate center on resize if needed, though centerX/Y are currently fixed ratios
+    // centerX = width * 0.9;
+    // centerY = height * 0.2;
   });
 
-  // Define the center of the simulation within the canvas
   const centerX = width * 0.9;
-  const centerY = height *0.2;
+  const centerY = height * 0.2;
 
-  // Define some minimalistic planets with orbit parameters
   const planets = [
-    {
-      orbitRadius: 60,
-      size: 5,
-      speed: 0.01,
-      angle: Math.random() * Math.PI * 2,
-      color: '#ffffff' // Red-orange planet
-    },
-    {
-      orbitRadius: 100,
-      size: 7,
-      speed: 0.006,
-      angle: Math.random() * Math.PI * 2,
-      color: '#ffffff' // Blue planet
-    },
-    {
-      orbitRadius: 170,
-      size: 6,
-      speed: 0.003,
-      angle: Math.random() * Math.PI * 2,
-      color: '#ffffff' // Green planet
-    }
+    { orbitRadius: 60, size: 5, speed: 1.0, angle: Math.random() * Math.PI * 2, color: '#ffffff' }, // Adjusted speed interpretation
+    { orbitRadius: 100, size: 7, speed: 0.6, angle: Math.random() * Math.PI * 2, color: '#ffffff' }, // Adjusted speed interpretation
+    { orbitRadius: 170, size: 6, speed: 0.3, angle: Math.random() * Math.PI * 2, color: '#ffffff' }  // Adjusted speed interpretation
   ];
 
-  // Function to update and draw the simulation
-  function draw() {
-    // Clear the canvas
-    ctx.clearRect(0, 0, width, height);
+  let lastTime = 0;
+  // --- Control the overall simulation speed ---
+  // Increase this value to speed up the simulation, decrease to slow down.
+  // 1.0 represents "normal" speed based on the adjusted planet speeds.
+  const timeScale = 1.0;
+
+  function draw(currentTime) {
+    // Calculate time elapsed since the last frame in seconds
+    const deltaTime = (currentTime - lastTime) / 1000;
+    lastTime = currentTime;
+
+    // --- Optimization: Clear only if canvas size is valid ---
+    if (width > 0 && height > 0) {
+        ctx.clearRect(0, 0, width, height);
+    } else {
+        // Skip drawing if canvas has no dimensions yet or on resize glitch
+        requestAnimationFrame(draw);
+        return;
+    }
+
 
     // Draw the central star
     ctx.beginPath();
@@ -74,13 +66,17 @@ function initPlanetSimulation() {
 
     // Draw each planet and its orbit
     planets.forEach(planet => {
-      // Update the planet's angle for orbiting
-      planet.angle += planet.speed;
+      // Update the planet's angle based on speed and deltaTime
+      // The angle now increases proportionally to the time elapsed
+      // Use timeScale to adjust the overall simulation speed
+      planet.angle += planet.speed * deltaTime * timeScale;
 
       // Calculate the planet's position relative to the center
-      const x = centerX + planet.orbitRadius * Math.cos(2 * planet.angle);
-      const y = centerY + planet.orbitRadius * Math.sin(3 * planet.angle);
-
+      // --- Optimization: Cache Math constants if performance critical (minor here) ---
+      const cosAngle = Math.cos(2 * planet.angle);
+      const sinAngle = Math.sin(3 * planet.angle); // Note: Using different multipliers for cos/sin creates Lissajous-like curves, not circular/elliptical orbits. Keep if intended.
+      const x = centerX + planet.orbitRadius * cosAngle;
+      const y = centerY + planet.orbitRadius * sinAngle;
 
       // Draw the planet
       ctx.beginPath();
@@ -93,8 +89,8 @@ function initPlanetSimulation() {
     requestAnimationFrame(draw);
   }
 
-  // Start the simulation
-  draw();
+  // Start the simulation by requesting the first frame
+  // Pass the initial timestamp
+  requestAnimationFrame(draw);
 }
-
 </script>
