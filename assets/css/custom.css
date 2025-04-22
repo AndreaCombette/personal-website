@@ -80,10 +80,26 @@ div.prose:nth-child(2) {
 }
 .bg-image {
   filter: contrast(0.6);
-  }
+}
+
 /* #section-resume-biography-3 {
   border-bottom-color: black;
   border-bottom-width: 3px;
   border-top-color: black;
   border-top-width: 3px;
 } */
+
+.background-caption {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  z-index: 10;
+  max-width: 80vw;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  pointer-events: none;
+}

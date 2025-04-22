@@ -5,6 +5,12 @@
     return;
   }
 
+  // --- Add background caption box ---
+  const caption = document.createElement('div');
+  caption.className = 'background-caption';
+  caption.innerText = 'Image source: Your Source Here'; // Change this text as needed
+  container.appendChild(caption);
+
   const canvas = document.createElement("canvas");
   canvas.id = "planetCanvas";
   container.prepend(canvas);
