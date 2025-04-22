@@ -69,3 +69,18 @@ projects:
 {{% callout note %}}
 This talk was given at the ENS-lyon during my final year of master.
 {{% /callout %}}
+
+
+<iframe
+  src="uploads/slides_publications/CFD_beamer.pdf"
+  style="
+    width: 100%;
+    height: 400px;
+    border: 5px solid #000;      /* black border, 5px thick */
+    border-radius: 12px;         /* rounded corners */
+    overflow: hidden;            /* clip any overflowing PDF content */
+  "
+  webkitallowfullscreen
+  mozallowfullscreen
+  allowfullscreen>
+</iframe>

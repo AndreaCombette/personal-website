@@ -63,3 +63,17 @@ projects:
 {{% callout note %}}
 This talk was given at the Swiss Plasma Center Seminar, EPFL, Lausanne, Switzerland by me as a part of my first year of master thesis.
 {{% /callout %}}
+
+<iframe
+  src="uploads/SPC_beamer.pdf"
+  style="
+    width: 100%;
+    height: 400px;
+    border: 5px solid #000;      /* black border, 5px thick */
+    border-radius: 12px;         /* rounded corners */
+    overflow: hidden;            /* clip any overflowing PDF content */
+  "
+  webkitallowfullscreen
+  mozallowfullscreen
+  allowfullscreen>
+</iframe>

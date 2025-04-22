@@ -81,10 +81,9 @@ div.prose:nth-child(2) {
 .bg-image {
   filter: blur(3px) contrast(0.85);
   }
-
-#section-resume-biography-3 {
+/* #section-resume-biography-3 {
   border-bottom-color: black;
-  border-bottom-width: 6px;
+  border-bottom-width: 3px;
   border-top-color: black;
-  border-top-width: 6px;
-}
+  border-top-width: 3px;
+} */
