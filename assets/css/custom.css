@@ -79,7 +79,7 @@ div.prose:nth-child(2) {
   color: rgb(255, 255, 255);
 }
 .bg-image {
-  filter: blur(3px) contrast(0.85);
+  filter: blur(2px) contrast(0.9);
   }
 /* #section-resume-biography-3 {
   border-bottom-color: black;
