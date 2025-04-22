@@ -65,7 +65,7 @@ This talk was given at the Swiss Plasma Center Seminar, EPFL, Lausanne, Switzerl
 {{% /callout %}}
 
 <iframe
-  src="uploads/SPC_beamer.pdf"
+  src="/uploads/SPC_beamer.pdf"
   style="
     width: 100%;
     height: 400px;

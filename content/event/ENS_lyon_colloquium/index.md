@@ -72,7 +72,7 @@ This talk was given at the ENS-lyon during my final year of master.
 
 
 <iframe
-  src="uploads/slides_publications/CFD_beamer.pdf"
+  src="/uploads/slides_publications/CFD_beamer.pdf"
   style="
     width: 100%;
     height: 400px;
