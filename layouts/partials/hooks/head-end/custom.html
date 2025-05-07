@@ -1,102 +1,159 @@
-<script> document.addEventListener("DOMContentLoaded", function () {
-  const container = document.querySelector('.home-section-bg.bg-image');
-  if (!container) {
-    console.error("Container with class '.home-section-bg.bg-image' not found.");
-    return;
-  }
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".home-section-bg.bg-image");
+    if (!container) {
+      console.error(
+        "Container with class '.home-section-bg.bg-image' not found."
+      );
+      return;
+    }
+    // --- Add background caption box ---
+    const caption = document.createElement("div");
+    caption.className = "background-caption";
+    caption.innerText = "NASA's Juno Mission"; // Change this text as needed
+    container.appendChild(caption);
 
-  // --- Add background caption box ---
-  const caption = document.createElement('div');
-  caption.className = 'background-caption';
-  caption.innerText = 'NASA\'s Juno Mission'; // Change this text as needed
-  container.appendChild(caption);
+    const canvas = document.createElement("canvas");
+    canvas.id = "planetCanvas";
+    container.prepend(canvas);
 
-  const canvas = document.createElement("canvas");
-  canvas.id = "planetCanvas";
-  container.prepend(canvas);
-
-  initPlanetSimulation();
-});
-
-function initPlanetSimulation() {
-  const canvas = document.getElementById('planetCanvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-
-  let width = canvas.width = canvas.offsetWidth;
-  let height = canvas.height = canvas.offsetHeight;
-
-  window.addEventListener('resize', function () {
-    width = canvas.width = canvas.offsetWidth;
-    height = canvas.height = canvas.offsetHeight;
-    // Recalculate center on resize if needed, though centerX/Y are currently fixed ratios
-    // centerX = width * 0.9;
-    // centerY = height * 0.2;
+    initPlanetSimulation();
   });
 
-  const centerX = width * 0.9;
-  const centerY = height * 0.2;
+  function initPlanetSimulation() {
+    const canvas = document.getElementById("planetCanvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
 
-  const planets = [
-    { orbitRadius: 60, size: 5, speed: 1.0, angle: Math.random() * Math.PI * 2, color: '#ffffff' }, // Adjusted speed interpretation
-    { orbitRadius: 100, size: 7, speed: 0.6, angle: Math.random() * Math.PI * 2, color: '#ffffff' }, // Adjusted speed interpretation
-    { orbitRadius: 170, size: 6, speed: 0.3, angle: Math.random() * Math.PI * 2, color: '#ffffff' }  // Adjusted speed interpretation
-  ];
+    let width = (canvas.width = canvas.offsetWidth);
+    let height = (canvas.height = canvas.offsetHeight);
 
-  let lastTime = 0;
-  // --- Control the overall simulation speed ---
-  // Increase this value to speed up the simulation, decrease to slow down.
-  // 1.0 represents "normal" speed based on the adjusted planet speeds.
-  const timeScale = 1.0;
-
-  function draw(currentTime) {
-    // Calculate time elapsed since the last frame in seconds
-    const deltaTime = (currentTime - lastTime) / 1000;
-    lastTime = currentTime;
-
-    // --- Optimization: Clear only if canvas size is valid ---
-    if (width > 0 && height > 0) {
-        ctx.clearRect(0, 0, width, height);
-    } else {
-        // Skip drawing if canvas has no dimensions yet or on resize glitch
-        requestAnimationFrame(draw);
-        return;
-    }
-
-
-    // Draw the central star
-    ctx.beginPath();
-    ctx.arc(centerX, centerY, 10, 0, Math.PI * 2);
-    ctx.fillStyle = '#cc3333';
-    ctx.fill();
-
-    // Draw each planet and its orbit
-    planets.forEach(planet => {
-      // Update the planet's angle based on speed and deltaTime
-      // The angle now increases proportionally to the time elapsed
-      // Use timeScale to adjust the overall simulation speed
-      planet.angle += planet.speed * deltaTime * timeScale;
-
-      // Calculate the planet's position relative to the center
-      // --- Optimization: Cache Math constants if performance critical (minor here) ---
-      const cosAngle = Math.cos(2 * planet.angle);
-      const sinAngle = Math.sin(3 * planet.angle); // Note: Using different multipliers for cos/sin creates Lissajous-like curves, not circular/elliptical orbits. Keep if intended.
-      const x = centerX + planet.orbitRadius * cosAngle;
-      const y = centerY + planet.orbitRadius * sinAngle;
-
-      // Draw the planet
-      ctx.beginPath();
-      ctx.arc(x, y, planet.size, 0, Math.PI * 2);
-      ctx.fillStyle = planet.color;
-      ctx.fill();
+    window.addEventListener("resize", function () {
+      width = canvas.width = canvas.offsetWidth;
+      height = canvas.height = canvas.offsetHeight;
     });
 
-    // Continue the animation loop
+    const centerX = width * 0.9;
+    const centerY = height * 0.2;
+
+    // Gravitational constant (scaled for visual simulation)
+    const G = 100;
+
+    // Central star
+    const star = {
+      x: centerX,
+      y: centerY,
+      mass: 1000,
+      radius: 10,
+    };
+
+    // Planets with physics properties
+    const planets = [
+      {
+        x: centerX + 60,
+        y: centerY,
+        vx: 0,
+        vy: 30,
+        mass: 1,
+        radius: 5,
+        color: "#ffffff",
+        trail: [],
+      },
+      {
+        x: centerX + 100,
+        y: centerY,
+        vx: 0,
+        vy: 23,
+        mass: 2,
+        radius: 7,
+        color: "#ffffff",
+        trail: [],
+      },
+      {
+        x: centerX + 170,
+        y: centerY,
+        vx: 0,
+        vy: 17,
+        mass: 1.5,
+        radius: 6,
+        color: "#ffffff",
+        trail: [],
+      },
+    ];
+
+    // Maximum number of trail points to store
+    const maxTrailLength = 60;
+
+    let lastTime = 0;
+    const timeScale = 0.5; // Reduced speed for better control
+
+    function draw(currentTime) {
+      const deltaTime = Math.min((currentTime - lastTime) / 1000, 0.1); // Cap delta time to avoid jumps
+      lastTime = currentTime;
+
+      if (width <= 0 || height <= 0) {
+        requestAnimationFrame(draw);
+        return;
+      }
+
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw the central star
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      ctx.fillStyle = "#cc3333";
+      ctx.fill();
+
+      // Update and draw each planet
+      planets.forEach((planet) => {
+        // Calculate gravitational force from star
+        const dx = star.x - planet.x;
+        const dy = star.y - planet.y;
+        const distSq = dx * dx + dy * dy;
+        const dist = Math.sqrt(distSq);
+
+        // Apply force (F = G * m1 * m2 / r²)
+        const force = (G * star.mass * planet.mass) / distSq;
+        const ax = (force * dx) / dist;
+        const ay = (force * dy) / dist;
+
+        // Update velocity (scaled by timeScale)
+        planet.vx += ax * deltaTime * timeScale;
+        planet.vy += ay * deltaTime * timeScale;
+
+        // Update position
+        planet.x += planet.vx * deltaTime * timeScale;
+        planet.y += planet.vy * deltaTime * timeScale;
+
+        // Store trail position
+        planet.trail.unshift({ x: planet.x, y: planet.y });
+
+        // Limit trail length
+        if (planet.trail.length > maxTrailLength) {
+          planet.trail.pop();
+        }
+
+        // Draw trail
+        planet.trail.forEach((point, index) => {
+          const opacity = 1 - index / maxTrailLength;
+          ctx.beginPath();
+          ctx.arc(point.x, point.y, planet.radius * 0.5, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 0.5})`;
+          ctx.fill();
+        });
+
+        // Draw the planet
+        ctx.beginPath();
+        ctx.arc(planet.x, planet.y, planet.radius, 0, Math.PI * 2);
+        ctx.fillStyle = planet.color;
+        ctx.fill();
+      });
+
+      // Continue the animation loop
+      requestAnimationFrame(draw);
+    }
+
+    // Start the simulation
     requestAnimationFrame(draw);
   }
-
-  // Start the simulation by requesting the first frame
-  // Pass the initial timestamp
-  requestAnimationFrame(draw);
-}
 </script>
