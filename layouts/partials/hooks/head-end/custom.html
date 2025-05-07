@@ -17,7 +17,23 @@
     canvas.id = "planetCanvas";
     container.prepend(canvas);
 
-    initPlanetSimulation();
+    // Only initialize planet simulation on non-mobile devices
+    if (window.innerWidth >= 768) {
+      initPlanetSimulation();
+    }
+
+    // Hide/show canvas on resize
+    window.addEventListener("resize", function () {
+      const canvas = document.getElementById("planetCanvas");
+      if (window.innerWidth >= 768) {
+        if (canvas.style.display === "none") {
+          canvas.style.display = "block";
+          initPlanetSimulation();
+        }
+      } else {
+        canvas.style.display = "none";
+      }
+    });
   });
 
   function initPlanetSimulation() {
@@ -50,7 +66,7 @@
     // Planets with physics properties
     const planets = [
       {
-        x: centerX + 60,
+        x: centerX + 50,
         y: centerY,
         vx: 0,
         vy: 30,
@@ -82,13 +98,13 @@
     ];
 
     // Maximum number of trail points to store
-    const maxTrailLength = 60;
+    const maxTrailLength = 80;
 
     let lastTime = 0;
     const timeScale = 0.5; // Reduced speed for better control
 
     function draw(currentTime) {
-      const deltaTime = Math.min((currentTime - lastTime) / 1000, 0.1); // Cap delta time to avoid jumps
+      const deltaTime = Math.min((currentTime - lastTime) / 100, 0.1); // Cap delta time to avoid jumps
       lastTime = currentTime;
 
       if (width <= 0 || height <= 0) {
