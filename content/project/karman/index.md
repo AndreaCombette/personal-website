@@ -25,9 +25,9 @@ links:
   - icon: github
     icon_pack: fab
     name: Follow
-    url: https://github.com/Chatr0uge/T.I.P.E_Karman
+    url: https://github.com/AndreaCombette/T.I.P.E_Karman
 
-url_code: "https://github.com/Chatr0uge/T.I.P.E_Karman"
+url_code: "https://github.com/AndreaCombette/T.I.P.E_Karman"
 url_slides: ""
 url_video: ""
 

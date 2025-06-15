@@ -20,9 +20,9 @@ links:
   - icon: github
     icon_pack: fab
     name: Follow
-    url: https://github.com/Chatr0uge/Stocks-exchange
+    url: https://github.com/AndreaCombette/Stocks-exchange
 
-url_code: "https://github.com/Chatr0uge/Stocks-exchange"
+url_code: "https://github.com/AndreaCombette/Stocks-exchange"
 url_slides: ""
 url_video: ""
 

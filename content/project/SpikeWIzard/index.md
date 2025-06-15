@@ -18,9 +18,9 @@ links:
   - icon: github
     icon_pack: fab
     name: Follow
-    url: https://github.com/Chatr0uge/SpikeWizard
+    url: https://github.com/AndreaCombette/SpikeWizard
 
-url_code: "https://github.com/Chatr0uge/SpikeWizard"
+url_code: "https://github.com/AndreaCombette/SpikeWizard"
 url_slides: ""
 url_video: ""
 # Slides (optional).

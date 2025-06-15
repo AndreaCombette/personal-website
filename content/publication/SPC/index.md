@@ -29,8 +29,8 @@ featured: false
 
 url_pdf:
 url_slides: uploads/slides_publications/SPC_beamer.pdf
-url_code: "https://github.com/Chatr0uge/Internship_SPC"
-url_source: "https://github.com/Chatr0uge/Internship_SPC/tree/main/src"
+url_code: "https://github.com/AndreaCombette/Internship_SPC"
+url_source: "https://github.com/AndreaCombette/Internship_SPC/tree/main/src"
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:

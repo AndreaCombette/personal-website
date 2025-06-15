@@ -25,9 +25,9 @@ links:
   - icon: github
     icon_pack: fab
     name: Follow
-    url: https://github.com/Chatr0uge/Weather-forecasting
+    url: https://github.com/AndreaCombette/Weather-forecasting
 
-url_code: "https://github.com/Chatr0uge/Weather-forecasting"
+url_code: "https://github.com/AndreaCombette/Weather-forecasting"
 url_slides: ""
 url_video: ""
 

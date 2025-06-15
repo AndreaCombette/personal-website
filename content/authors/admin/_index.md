@@ -30,7 +30,7 @@ profiles:
     url: "mailto:andrea.combette@ens.psl.eu"
     label: E-mail Me
   - icon: brands/github
-    url: https://github.com/Chatr0uge
+    url: https://github.com/AndreaCombette
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/andrea-combette-37a330235/
   - icon: academicons/orcid

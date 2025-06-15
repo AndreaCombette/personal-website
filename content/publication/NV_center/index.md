@@ -31,7 +31,7 @@ tags:
 featured: false
 
 url_pdf:
-url_code: "https://github.com/Chatr0uge/NV_center"
+url_code: "https://github.com/AndreaCombette/NV_center"
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:

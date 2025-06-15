@@ -82,6 +82,19 @@ div.prose:nth-child(2) {
   filter: contrast(0.6);
 }
 
+=
+
+@media (min-width: 1024px) {
+  .lg\:prose-xl {
+    font-size: 1rem;
+  }
+  .lg\:prose-xl :where(p):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    text-align: justify;
+  }
+}
+
+
+
 /* #section-resume-biography-3 {
   border-bottom-color: black;
   border-bottom-width: 3px;
