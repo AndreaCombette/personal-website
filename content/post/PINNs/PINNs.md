@@ -74,7 +74,3 @@ $$
 
 This simplification leads to a unbiased approximation of the loss function, with a variance that is proportional to the number of points used in the approximation, the error we made on the integral value is $\mathcal{O}(1/\sqrt{N})$ where $N$ is the number of points used in the approximation. So in addition to the previous *approximation error* we have a first *estimation error* resulting from the Monte Carlo approximation of the loss function, this is also really important to keep in mind when using PINNs.
 
-
-{{% callout note %}}
-      This post is still under writing and will be updated in the following days. I will try to add some more details on the implementation and the mathematics behind PINNs.
-{{% /callout %}}
