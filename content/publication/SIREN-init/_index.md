@@ -4,11 +4,11 @@ authors:
   - admin 
   - Antoine Venaille
   - Nelly Pustelnik
-date: "2025-04-15T00:00:00Z"
-doi: "10.1088/1361-6587/adcd2a"
+date: "2025-12-06T00:00:00Z"
+doi: "https://doi.org/10.48550/arXiv.2512.06427"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2025-12-15T00:00:00Z"
+publishDate: "2025-12-06T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
