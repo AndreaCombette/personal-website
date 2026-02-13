@@ -4,13 +4,11 @@ authors:
   - admin 
   - Antoine Venaille
   - Nelly Pustelnik
-
-date: "2026-01-19T00:00:00"
-
+date: "2026-01-19T00:00:00Z"
 doi: "https://doi.org/10.48550/arXiv.2512.06427"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2026-01-19T00:00:00"
+publishDate: "2026-01-19T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -27,7 +25,6 @@ summary:
 tags:
   - Machine Learning
   - Learning Theory
-featured: false
 
 url_pdf: "https://arxiv.org/abs/2512.06427"
 # Featured image
@@ -51,16 +48,3 @@ projects:
 #   Otherwise, set `slides: ""`.
 slides:
 ---
-<iframe
-  src="SIREN-init.pdf"
-  style="
-    width: 100%;
-    height: 800px;
-    border: 5px solid #000;      /* black border, 5px thick */
-    border-radius: 12px;         /* rounded corners */
-    overflow: hidden;            /* clip any overflowing PDF content */
-  "
-  webkitallowfullscreen
-  mozallowfullscreen
-  allowfullscreen>
-</iframe>
