@@ -1,8 +1,8 @@
 ---
 title: "Long time Overturn Study in the second phase of the moon cooling using numerical and perturbated Boussinesq equations"
 authors:
-  - Louis Poitevin
   - admin
+  - Louis Poitevin
 author_notes:
   - "Equal contribution"
   - "Equal contribution"
