@@ -14,46 +14,44 @@ div.prose:nth-child(2) {
   font-weight: 600;
 }
 
-/* Hover effect on each letter */
-.mb-6.text-3xl.font-bold.text-gray-900.dark\:text-white span:hover {
-  transform: scale(1.5) rotate(15deg);
-  color: #e53e3e; /* For example, change to a vibrant red on hover */
-}
+
 /* Ensure the container remains a positioned element */
 .home-section-bg.bg-image {
   position: absolute;
 }
 
 /* Style the simulation canvas */
-#planetCanvas {
-  position: relative;
-  top: 0;
-  right: 0;
-  width: 100%; /* Adjust width as desired */
-  height: 100%; /* Adjust height as desired */
-  z-index: 1; /* Lower than the text that comes later in the DOM */
-  pointer-events: none;
-  background-color: transparent; /* So it doesn’t interfere with user interactions */
-}
+/* #planetCanvas { */
+/* position: relative; */
+/* top: 0; */
+/* right: 0; */
+/* width: 100%; */
+/* Adjust width as desired */
+/* height: 100%; */
+/* Adjust height as desired */
+/* z-index: 1; */
+/* Lower than the text that comes later in the DOM */
+/* pointer-events: none; */
+/* background-color: transparent; */
+/* So it doesn’t interfere with user interactions */
+/* } */
+
 @font-face {
   font-family: "Harding Text Web Bold Regular";
   src: url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.eot");
-  src: url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.svg#Harding Text Web Bold Regular")
-      format("svg");
+  src: url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b9f30d2f67a2115cbb54208678b9ac66.svg#Harding Text Web Bold Regular") format("svg");
 }
 
 .font-bold {
   font-weight: 800;
-  font-family: "Harding Text Web Bold Regular"; /* Include a fallback like sans-serif */
+  font-family: "Harding Text Web Bold Regular";
+  /* Include a fallback like sans-serif */
 }
+
 .navbar-brand {
   font-size: 1.25rem;
   font-weight: 600;
@@ -61,33 +59,36 @@ div.prose:nth-child(2) {
   color: rgb(0 0 0 / var(--tw-text-opacity));
   font-family: "Harding Text Web Bold Regular";
 }
+
 .section-subheading {
   font-family: "Harding Text Web Bold Regular";
 }
+
 .prose :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   font-family: "Harding Text Web Bold Regular";
 }
 
-.bio-text > p:nth-child(2) {
+.bio-text>p:nth-child(2) {
   text-align: justify;
   font-style: bold;
   color: white;
   font-weight: 599;
 }
+
 :is(.dark .dark\:text-gray-300) {
   --tw-text-opacity: 1;
   color: rgb(255, 255, 255);
 }
+
 .bg-image {
   filter: contrast(0.6);
 }
-
-=
 
 @media (min-width: 1024px) {
   .lg\:prose-xl {
     font-size: 1rem;
   }
+
   .lg\:prose-xl :where(p):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
     text-align: justify;
   }
@@ -101,7 +102,7 @@ div.prose:nth-child(2) {
   border-top-color: black;
   border-top-width: 3px;
 } */
-
+/* 
 .background-caption {
   position: absolute;
   bottom: 2rem;
@@ -115,4 +116,4 @@ div.prose:nth-child(2) {
   max-width: 80vw;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   pointer-events: none;
-}
+} */
