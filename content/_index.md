@@ -45,12 +45,18 @@ sections:
     content:
       title: Recent Reports & Publications
       text: ""
+      count: 10   # optional: increase while debugging
       filters:
         folders:
           - publication
         exclude_featured: false
+        exclude_future: false   # optional but useful to force showing future-dated items
+        exclude_past: false
+      sort_by: Date
+      sort_ascending: false
     design:
       view: citation
+
   - block: collection
     id: posts
     content:

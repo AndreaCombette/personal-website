@@ -5,12 +5,12 @@ authors:
   - Antoine Venaille
   - Nelly Pustelnik
 
-date: "2025-12-06T00:00:00Z"
+date: "2026-01-19T00:00:00"
 
 doi: "https://doi.org/10.48550/arXiv.2512.06427"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2025-12-06T00:00:00Z"
+publishDate: "2026-01-19T00:00:00"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
