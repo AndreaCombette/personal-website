@@ -119,7 +119,7 @@ div.prose:nth-child(2) {
 }
 
 /* Ensure the container remains a positioned element and captures mouse events */
-.home-section-bg.bg-image.parallax {
+.home-section-bg.bg-image {
   position: absolute;
   overflow: hidden;
   z-index: -2;
