@@ -103,20 +103,7 @@ div.prose:nth-child(2) {
   border-top-width: 3px;
 }
 
-.background-caption {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 0.5em 1em;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  z-index: 10;
-  max-width: 80vw;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  pointer-events: none;
-}
+
 
 /* Ensure the container remains a positioned element and captures mouse events */
 .home-section-bg.bg-image {
@@ -154,19 +141,19 @@ div.prose:nth-child(2) {
 .simulation-controls {
   position: absolute;
   /* Changed from absolute to fixed */
-  top: 1rem;
+  top: 7rem;
   right: 1rem;
   background: rgba(255,
       255,
       255,
-      0.95);
+      0.8);
   /* Light background with high opacity */
   color: #333;
   /* Dark text for contrast */
   padding: 1rem;
   border-radius: 12px;
   font-size: 0.85rem;
-  z-index: 9999;
+  z-index: 0;
   /* Much higher z-index */
   min-width: 200px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);

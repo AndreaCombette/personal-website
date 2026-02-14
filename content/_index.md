@@ -15,7 +15,9 @@ sections:
       username: admin
       text: ""
     design:
-      css_class: "bg-gray-100 dark:bg-gray-800"
+      css_class: dark
+      background:
+        color: white
 
   - block: markdown
     content:
