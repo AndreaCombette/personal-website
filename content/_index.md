@@ -18,6 +18,14 @@ sections:
       css_class: dark
       background:
         color: white
+        image:
+          # Add your image background to `assets/media/`.
+          filename: back6.jpg
+          size: cover
+          position: center
+          parallax: false
+          caption: "Image credit: [**Peony, 2017**](James Lahey, Mixed Media on Canvas)"
+          focal_point: Right
 
   - block: markdown
     content:
