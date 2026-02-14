@@ -16,11 +16,11 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Physics Student
+role: PhD Student in Physics
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: École Normale Superieure de Paris
-    url: https://www.ens.psl.eu
+  - name: École Normale Superieure de Lyon
+    url: https://www.ens-lyon.fr
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
