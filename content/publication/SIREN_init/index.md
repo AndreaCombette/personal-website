@@ -2,7 +2,8 @@
 title: "A new initialisation to Control Gradients in Sinusoidal Neural network"
 authors:
   - admin
-  - Stephan Brunner
+  - Antoine Venaille
+  - Nelly Pustelnik
 date: "2025-05-15T00:00:00Z"
 doi: "https://doi.org/10.48550/arXiv.2512.06427"
 
