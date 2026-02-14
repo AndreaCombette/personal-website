@@ -96,13 +96,13 @@ div.prose:nth-child(2) {
 
 
 
-/* #section-resume-biography-3 {
+#section-resume-biography-3 {
   border-bottom-color: black;
   border-bottom-width: 3px;
   border-top-color: black;
   border-top-width: 3px;
-} */
-/* 
+}
+
 .background-caption {
   position: absolute;
   bottom: 2rem;
@@ -114,6 +114,6 @@ div.prose:nth-child(2) {
   font-size: 0.95rem;
   z-index: 10;
   max-width: 80vw;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   pointer-events: none;
-} */
+}
