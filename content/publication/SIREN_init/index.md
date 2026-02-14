@@ -15,7 +15,7 @@ publishDate: "2025-05-15T00:00:00Z"
 publication_types: ["manuscript"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Nonlinear effects in Fluctuation Short Pulse Reflectometry"
+publication: "test"
 publication_short: ""
 
 abstract: The fluctuation short pulse reflectometry diagnostic is simulated with the full-wave CUWA code for ad-hoc turbulence and simplified geometry. The nonlinear scattering effects on the measurements are investigated while accounting for the plasma curvature, probing angle misalignment and non-Gaussian wavenumber spectrum of the turbulence. The asymmetry of the delay distribution as well as broadening of the average reflected pulse are shown to be consistent and easily applicable in experiment as markers of the nonlinear scattering regime. A machine learning model able to predict the turbulence amplitude and the value of unperturbed pulse delay in the nonlinear scattering regime is developed. This model, based on various regression methods, demonstrates improved performance compared to the current technique in both linear and nonlinear scattering regimes.
