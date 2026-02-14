@@ -5,7 +5,7 @@ authors:
   - Antoine Venaille
   - Nelly Pustelnik
 date: "2026-01-19T00:00:00Z"
-doi: "https://doi.org/10.48550/arXiv.2512.06427"
+doi: "10.48550/arXiv.2512.06427"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2026-01-19T00:00:00Z"
@@ -23,9 +23,8 @@ abstract: Proper initialisation strategy is of primary importance to mitigate gr
 # Summary. An optional shortened abstract.
 summary:
 tags:
-  - Machine Learning
-  - Learning Theory
-
+  - Sciences
+featured: false
 url_pdf: "https://arxiv.org/abs/2512.06427"
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
