@@ -333,9 +333,9 @@
             const speedCurve = speed * speed * (3 - 2 * speed); // Smoothstep function for smoother transitions
 
             // White (255,255,255) to Light Blue (100,150,255) transition
-            const r = Math.floor(255 - speedCurve * 155); // 255 → 100
+            const r = 255; // 255 → 100
             const g = Math.floor(255 - speedCurve * 105); // 255 → 150
-            const b = 255; // Keep blue channel at maximum
+            const b = Math.floor(255 - speedCurve * 155); // Keep blue channel at maximum
 
             // Linear scaling for visual contrast with smoother alpha transitions
             // Apply smoothstep to density as well for consistent smoothing

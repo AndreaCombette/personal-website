@@ -134,7 +134,7 @@ div.prose:nth-child(2) {
   /* Behind everything except the background */
   pointer-events: none;
   /* Allow interactions to pass through to content */
-  background-color: transparent;
+  background-color: white;
 }
 
 /* Simulation controls panel */
@@ -173,8 +173,8 @@ div.prose:nth-child(2) {
 .simulation-controls h4 {
   margin: 0 0 0.75rem 0;
   font-size: 0.9rem;
-  color: #2563eb;
-  /* Blue color for light theme */
+  color: #cd4949;
+  /* Red color for light theme */
   text-align: center;
 }
 
@@ -190,7 +190,7 @@ div.prose:nth-child(2) {
   display: block;
   font-size: 0.75rem;
   margin-bottom: 0.25rem;
-  color: #555;
+  color: #3c3a3a;
   /* Darker gray for light theme */
 }
 
@@ -211,14 +211,14 @@ div.prose:nth-child(2) {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #2563eb;
-  /* Blue for light theme */
+  background: #cd4949;
+  /* Red for light theme */
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
 .control-slider::-webkit-slider-thumb:hover {
-  background: #1d4ed8;
+  background: #cd4949;
   /* Darker blue on hover */
 }
 
@@ -226,7 +226,7 @@ div.prose:nth-child(2) {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #2563eb;
+  background: #cd4949;
   /* Blue for light theme */
   cursor: pointer;
   border: none;
@@ -234,13 +234,13 @@ div.prose:nth-child(2) {
 }
 
 .control-slider::-moz-range-thumb:hover {
-  background: #1d4ed8;
+  background: #d56c6c;
   /* Darker blue on hover */
 }
 
 .control-value {
   font-size: 0.7rem;
-  color: #2563eb;
+  color: #cd4949;
   /* Blue for light theme */
   float: right;
   margin-top: -0.25rem;
@@ -259,14 +259,10 @@ div.prose:nth-child(2) {
   }
 }
 
-/* Ensure proper layering for hero content */
-
-/* Custom cursor for fluid interaction area */
 .hero-mouse-area:hover {
   cursor: crosshair;
 }
 
-/* Optional: Add some styling for the ocean theme */
 .hero-title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
