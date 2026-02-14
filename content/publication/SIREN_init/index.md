@@ -1,10 +1,10 @@
 ---
-title: "test"
+title: "A new initialisation to Control Gradients in Sinusoidal Neural network"
 authors:
   - admin
   - Stephan Brunner
 date: "2025-05-15T00:00:00Z"
-doi: "10.1088/1361-6587/adcd2a"
+doi: "https://doi.org/10.48550/arXiv.2512.06427"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2025-05-15T00:00:00Z"
@@ -15,17 +15,20 @@ publishDate: "2025-05-15T00:00:00Z"
 publication_types: ["manuscript"]
 
 # Publication name and optional abbreviated publication name.
-publication: "test"
+publication: "A new initialisation to Control Gradients in Sinusoidal Neural network"
 publication_short: ""
 
-abstract: The fluctuation short pulse reflectometry diagnostic is simulated with the full-wave CUWA code for ad-hoc turbulence and simplified geometry. The nonlinear scattering effects on the measurements are investigated while accounting for the plasma curvature, probing angle misalignment and non-Gaussian wavenumber spectrum of the turbulence. The asymmetry of the delay distribution as well as broadening of the average reflected pulse are shown to be consistent and easily applicable in experiment as markers of the nonlinear scattering regime. A machine learning model able to predict the turbulence amplitude and the value of unperturbed pulse delay in the nonlinear scattering regime is developed. This model, based on various regression methods, demonstrates improved performance compared to the current technique in both linear and nonlinear scattering regimes.
+abstract: Proper initialisation strategy is of primary importance to mitigate gradient explosion or vanishing when training neural networks. Yet, the impact of initialisation parameters still lacks a precise theoretical understanding for several well-established architectures. Here, we propose a new initialisation for networks with sinusoidal activation functions such as SIREN, focusing on gradients control, their scaling with network depth, their impact on training and on generalization. To achieve this, we identify a closed-form expression for the initialisation of the parameters, differing from the original SIREN scheme. This expression is derived from fixed points obtained through the convergence of pre-activation distribution and the variance of Jacobian sequences. Controlling both gradients and targeting vanishing pre-activation helps preventing the emergence of inappropriate frequencies during estimation, thereby improving generalization. We further show that this initialisation strongly influences training dynamics through the Neural Tangent Kernel framework (NTK). Finally, we benchmark SIREN with the proposed initialisation against the original scheme and other baselines on function fitting and image reconstruction. The new initialisation consistently outperforms state-of-the-art methods across a wide range of reconstruction tasks, including those involving physics-informed neural networks.
+
 # Summary. An optional shortened abstract.
 summary:
 tags:
   - Sciences
+  - Machine Learning
+  - Learning Theory
 featured: false
 
-url_pdf: "https://iopscience.iop.org/article/10.1088/1361-6587/adcd2a/pdf"
+url_pdf: "https://arxiv.org/pdf/2512.06427v1"
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
