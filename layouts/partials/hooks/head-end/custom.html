@@ -1,16 +1,411 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector(".home-section-bg.bg-image");
+    const container = document.querySelector(".home-section-bg.bg-image.parallax");
     if (!container) {
       console.error(
-        "Container with class '.home-section-bg.bg-image' not found."
+        "Container with class '.home-section-bg.bg-image.parallax' not found."
       );
       return;
     }
-    // --- Add background caption box ---
-    const caption = document.createElement("div");
-    caption.className = "background-caption";
-    caption.innerText = "NASA's Juno Mission"; // Change this text as needed
-    container.appendChild(caption);
+
+    // Create canvas for fluid simulation
+    const canvas = document.createElement("canvas");
+    canvas.id = "fluidCanvas";
+    container.prepend(canvas);
+
+    // Create simulation controls
+    const controls = document.createElement("div");
+    controls.className = "simulation-controls";
+    controls.innerHTML = `
+      <h4>Simulation Controls</h4>
+      <div class="control-group">
+        <label class="control-label">Viscosity <span class="control-value" id="viscosity-value">0.07</span></label>
+        <input type="range" class="control-slider" id="viscosity-slider" min="0.001" max="0.03" step="0.0005" value="0.012">
+      </div>
+      <div class="control-group">
+        <label class="control-label">Decay Rate <span class="control-value" id="decay-value">0.001</span></label>
+        <input type="range" class="control-slider" id="decay-slider" min="0.01" max="0.3" step="0.0001" value="0.11">
+      </div>
+      <div class="control-group">
+        <label class="control-label">Time Step <span class="control-value" id="timestep-value">0.02</span></label>
+        <input type="range" class="control-slider" id="timestep-slider" min="0.001" max="0.01" step="0.0001" value="0.004">
+      </div>
+      <div class="control-group">
+        <label class="control-label">Speed Weight <span class="control-value" id="speed-weight-value">0.4</span></label>
+        <input type="range" class="control-slider" id="speed-weight-slider" min="0" max="1" step="0.1" value="0.5">
+      </div>
+    `;
+
+    // Find the hero section to append controls to
+    const heroSection = document.querySelector(".relative.hbb-section.blox-hero");
+    if (heroSection) {
+      heroSection.appendChild(controls);
+    } else {
+      // Fallback to body if hero section not found
+      document.body.appendChild(controls);
+    }
+
+    // Find or create a mouse interaction area (the hero section or body)
+    let mouseArea = document.querySelector(".hero-mouse-area");
+    if (!mouseArea) {
+      // If no specific hero area, use the main content area or body
+      mouseArea = document.querySelector("main") || document.querySelector(".relative.isolate") || document.body;
+    }
+
+    // Only initialize fluid simulation on non-mobile devices
+    if (window.innerWidth >= 768) {
+      initFluidSimulation(mouseArea);
+    }
+
+    // Handle resize events
+    window.addEventListener("resize", function () {
+      const canvas = document.getElementById("fluidCanvas");
+      if (window.innerWidth >= 768) {
+        if (canvas.style.display === "none") {
+          canvas.style.display = "block";
+          initFluidSimulation(mouseArea);
+        }
+      } else {
+        canvas.style.display = "none";
+      }
+    });
   });
+
+  function initFluidSimulation(mouseArea) {
+    const canvas = document.getElementById("fluidCanvas");
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    let width = canvas.width = canvas.offsetWidth;
+    let height = canvas.height = canvas.offsetHeight;
+
+    // Fluid simulation parameters
+    const GRID_SIZE = 16;
+    const COLS = Math.floor(width / GRID_SIZE);
+    const ROWS = Math.floor(height / GRID_SIZE);
+
+    // Fluid properties
+    let velocityX = new Array(COLS * ROWS).fill(0);
+    let velocityY = new Array(COLS * ROWS).fill(0);
+    let density = new Array(COLS * ROWS).fill(0);
+    let prevVelocityX = new Array(COLS * ROWS).fill(0);
+    let prevVelocityY = new Array(COLS * ROWS).fill(0);
+    let prevDensity = new Array(COLS * ROWS).fill(0);
+
+    // Mouse interaction
+    let mouseX = 0;
+    let mouseY = 0;
+    let prevMouseX = 0;
+    let prevMouseY = 0;
+    let isMouseDown = false;
+
+    // Simulation parameters (now dynamic)
+    let VISCOSITY = 0.012;
+    let DIFFUSION = 0.01;
+    let dt = 0.004; // Time step
+    let decayRate = 0.11; // Density decay rate
+    let speedWeight = 0.5; // Speed contribution weight for color calculation
+
+    // Set up parameter controls
+    const viscositySlider = document.getElementById('viscosity-slider');
+    const decaySlider = document.getElementById('decay-slider');
+    const timestepSlider = document.getElementById('timestep-slider');
+    const speedWeightSlider = document.getElementById('speed-weight-slider');
+
+    const viscosityValue = document.getElementById('viscosity-value');
+    const decayValue = document.getElementById('decay-value');
+    const timestepValue = document.getElementById('timestep-value');
+    const speedWeightValue = document.getElementById('speed-weight-value');
+
+    // Update viscosity
+    viscositySlider.addEventListener('input', function () {
+      VISCOSITY = parseFloat(this.value);
+      viscosityValue.textContent = VISCOSITY.toFixed(3);
+    });
+
+    // Update decay rate
+    decaySlider.addEventListener('input', function () {
+      decayRate = parseFloat(this.value);
+      decayValue.textContent = decayRate.toFixed(4);
+    });
+
+    // Update time step
+    timestepSlider.addEventListener('input', function () {
+      dt = parseFloat(this.value);
+      timestepValue.textContent = dt.toFixed(3);
+    });
+
+    // Update speed weight
+    speedWeightSlider.addEventListener('input', function () {
+      speedWeight = parseFloat(this.value);
+      speedWeightValue.textContent = speedWeight.toFixed(1);
+    });
+
+    // Utility function to get array index from grid coordinates
+    function IX(x, y) {
+      return Math.max(0, Math.min(COLS - 1, x)) + Math.max(0, Math.min(ROWS - 1, y)) * COLS;
+    }
+
+    // Add density and velocity based on mouse movement
+    function addSourceFromMouse() {
+      const gridX = Math.floor(mouseX / GRID_SIZE);
+      const gridY = Math.floor(mouseY / GRID_SIZE);
+
+      // Better boundary checking
+      if (gridX >= 2 && gridX < COLS - 2 && gridY >= 2 && gridY < ROWS - 2) {
+        const dx = mouseX - prevMouseX;
+        const dy = mouseY - prevMouseY;
+        const velocity = Math.sqrt(dx * dx + dy * dy);
+
+        if (velocity > 0.1) {
+          const radius = 2; // Reduced radius for better boundary handling
+          for (let i = -radius; i <= radius; i++) {
+            for (let j = -radius; j <= radius; j++) {
+              const x = gridX + i;
+              const y = gridY + j;
+              // Extra boundary safety
+              if (x >= 1 && x < COLS - 1 && y >= 1 && y < ROWS - 1) {
+                const dist = Math.sqrt(i * i + j * j);
+                const strength = Math.max(0, 1 - dist / radius);
+
+                const idx = IX(x, y);
+                velocityX[idx] += dx * strength * 0.06; // Reduced strength
+                velocityY[idx] += dy * strength * 0.06;
+                density[idx] += velocity * strength * 0.4;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Set boundary conditions
+    function setBoundary(b, x) {
+      // Set boundary conditions for walls
+      for (let i = 1; i < COLS - 1; i++) {
+        x[IX(i, 0)] = b === 2 ? -x[IX(i, 1)] : x[IX(i, 1)];
+        x[IX(i, ROWS - 1)] = b === 2 ? -x[IX(i, ROWS - 2)] : x[IX(i, ROWS - 2)];
+      }
+      for (let j = 1; j < ROWS - 1; j++) {
+        x[IX(0, j)] = b === 1 ? -x[IX(1, j)] : x[IX(1, j)];
+        x[IX(COLS - 1, j)] = b === 1 ? -x[IX(COLS - 2, j)] : x[IX(COLS - 2, j)];
+      }
+
+      // Set corner boundary conditions
+      x[IX(0, 0)] = 0.5 * (x[IX(1, 0)] + x[IX(0, 1)]);
+      x[IX(0, ROWS - 1)] = 0.5 * (x[IX(1, ROWS - 1)] + x[IX(0, ROWS - 2)]);
+      x[IX(COLS - 1, 0)] = 0.5 * (x[IX(COLS - 2, 0)] + x[IX(COLS - 1, 1)]);
+      x[IX(COLS - 1, ROWS - 1)] = 0.5 * (x[IX(COLS - 2, ROWS - 1)] + x[IX(COLS - 1, ROWS - 2)]);
+    }
+
+    // Simple diffusion step
+    function diffuse(b, x, x0, diff, dt) {
+      const a = dt * diff * COLS * ROWS;
+      for (let k = 0; k < 4; k++) {
+        for (let i = 1; i < COLS - 1; i++) {
+          for (let j = 1; j < ROWS - 1; j++) {
+            const idx = IX(i, j);
+            x[idx] = (x0[idx] + a * (
+              x[IX(i - 1, j)] + x[IX(i + 1, j)] +
+              x[IX(i, j - 1)] + x[IX(i, j + 1)]
+            )) / (1 + 4 * a);
+          }
+        }
+        setBoundary(b, x);
+      }
+    }
+
+    // Advection step
+    function advect(b, d, d0, u, v, dt) {
+      const dt0 = dt * COLS;
+      for (let i = 1; i < COLS - 1; i++) {
+        for (let j = 1; j < ROWS - 1; j++) {
+          let x = i - dt0 * u[IX(i, j)];
+          let y = j - dt0 * v[IX(i, j)];
+
+          x = Math.max(0.5, Math.min(COLS - 1.5, x));
+          y = Math.max(0.5, Math.min(ROWS - 1.5, y));
+
+          const i0 = Math.floor(x);
+          const j0 = Math.floor(y);
+          const i1 = i0 + 1;
+          const j1 = j0 + 1;
+
+          const s1 = x - i0;
+          const s0 = 1 - s1;
+          const t1 = y - j0;
+          const t0 = 1 - t1;
+
+          d[IX(i, j)] = s0 * (t0 * d0[IX(i0, j0)] + t1 * d0[IX(i0, j1)]) +
+            s1 * (t0 * d0[IX(i1, j0)] + t1 * d0[IX(i1, j1)]);
+        }
+      }
+      setBoundary(b, d);
+    }
+
+    // Project velocity field to be divergence-free
+    function project(u, v, p, div) {
+      const h = 1.0 / COLS;
+
+      for (let i = 1; i < COLS - 1; i++) {
+        for (let j = 1; j < ROWS - 1; j++) {
+          div[IX(i, j)] = -0.5 * h * (
+            u[IX(i + 1, j)] - u[IX(i - 1, j)] +
+            v[IX(i, j + 1)] - v[IX(i, j - 1)]
+          );
+          p[IX(i, j)] = 0;
+        }
+      }
+      setBoundary(0, div);
+      setBoundary(0, p);
+
+      for (let k = 0; k < 4; k++) {
+        for (let i = 1; i < COLS - 1; i++) {
+          for (let j = 1; j < ROWS - 1; j++) {
+            p[IX(i, j)] = (div[IX(i, j)] +
+              p[IX(i - 1, j)] + p[IX(i + 1, j)] +
+              p[IX(i, j - 1)] + p[IX(i, j + 1)]) / 4;
+          }
+        }
+        setBoundary(0, p);
+      }
+
+      for (let i = 1; i < COLS - 1; i++) {
+        for (let j = 1; j < ROWS - 1; j++) {
+          u[IX(i, j)] -= 0.5 * (p[IX(i + 1, j)] - p[IX(i - 1, j)]) / h;
+          v[IX(i, j)] -= 0.5 * (p[IX(i, j + 1)] - p[IX(i, j - 1)]) / h;
+        }
+      }
+      setBoundary(1, u);
+      setBoundary(2, v);
+    }
+
+    // Main simulation step
+    function simulateStep() {
+      // Add mouse interaction
+      addSourceFromMouse();
+
+      // Velocity step
+      [prevVelocityX, velocityX] = [velocityX, prevVelocityX];
+      [prevVelocityY, velocityY] = [velocityY, prevVelocityY];
+
+      diffuse(1, velocityX, prevVelocityX, VISCOSITY, dt);
+      diffuse(2, velocityY, prevVelocityY, VISCOSITY, dt);
+
+      project(velocityX, velocityY, prevVelocityX, prevVelocityY);
+
+      [prevVelocityX, velocityX] = [velocityX, prevVelocityX];
+      [prevVelocityY, velocityY] = [velocityY, prevVelocityY];
+
+      advect(1, velocityX, prevVelocityX, prevVelocityX, prevVelocityY, dt);
+      advect(2, velocityY, prevVelocityY, prevVelocityX, prevVelocityY, dt);
+
+      project(velocityX, velocityY, prevVelocityX, prevVelocityY);
+
+      // Density step
+      [prevDensity, density] = [density, prevDensity];
+      diffuse(0, density, prevDensity, DIFFUSION, dt);
+      [prevDensity, density] = [density, prevDensity];
+      advect(0, density, prevDensity, velocityX, velocityY, dt);
+
+      // Fade density over time using dynamic decay rate
+      for (let i = 0; i < density.length; i++) {
+        density[i] *= (1 - decayRate);
+      }
+    }
+
+    // Render the fluid
+    function render() {
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < COLS; i++) {
+        for (let j = 0; j < ROWS; j++) {
+          const idx = IX(i, j);
+          const d = Math.min(1, density[idx]);
+          const velMag = Math.sqrt(velocityX[idx] * velocityX[idx] + velocityY[idx] * velocityY[idx]);
+
+          if (d > 0.00 || velMag > 0.00) {
+            // Enhanced color transition: white when still, blue when moving
+            // Use a more gradual speed scaling for smoother transitions
+            const speed = Math.min(1, velMag * 8); // Reduced multiplier from 15 to 8 for gentler transitions
+
+            // Smoother color transition with cubic easing
+            const speedCurve = speed * speed * (3 - 2 * speed); // Smoothstep function for smoother transitions
+
+            // White (255,255,255) to Light Blue (100,150,255) transition
+            const r = Math.floor(255 - speedCurve * 155); // 255 → 100
+            const g = Math.floor(255 - speedCurve * 105); // 255 → 150
+            const b = 255; // Keep blue channel at maximum
+
+            // Linear scaling for visual contrast with smoother alpha transitions
+            // Apply smoothstep to density as well for consistent smoothing
+            const densityContribution = d * d * (3 - 2 * d); // Smoothstep for density
+            const speedContribution = speedCurve; // Already smoothed speed
+
+            // Combine both contributions with linear scaling
+            const combinedValue = Math.max(densityContribution, speedContribution * speedWeight); // Dynamic speed weight
+
+            // Smoother alpha mapping with less aggressive scaling
+            const alpha = Math.max(0.02, Math.min(0.7, combinedValue * 0.6 + 0.05)); // Softer alpha range [0.05, 0.7]
+
+            ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${alpha})`;
+            ctx.fillRect(i * GRID_SIZE, j * GRID_SIZE, GRID_SIZE, GRID_SIZE);
+          }
+        }
+      }
+    }
+
+    // Mouse event handlers - attach to the mouse area instead of canvas
+    if (mouseArea) {
+      mouseArea.addEventListener('mousemove', function (e) {
+        const rect = canvas.getBoundingClientRect();
+        prevMouseX = mouseX;
+        prevMouseY = mouseY;
+        mouseX = e.clientX - rect.left;
+        mouseY = e.clientY - rect.top;
+      });
+
+      mouseArea.addEventListener('mousedown', function (e) {
+        isMouseDown = true;
+      });
+
+      mouseArea.addEventListener('mouseup', function (e) {
+        isMouseDown = false;
+      });
+
+      mouseArea.addEventListener('mouseleave', function (e) {
+        isMouseDown = false;
+      });
+    }
+
+    // Handle window resize
+    window.addEventListener('resize', function () {
+      const newWidth = canvas.offsetWidth;
+      const newHeight = canvas.offsetHeight;
+
+      if (newWidth !== width || newHeight !== height) {
+        width = canvas.width = newWidth;
+        height = canvas.height = newHeight;
+
+        // Reinitialize grid
+        const newCols = Math.floor(width / GRID_SIZE);
+        const newRows = Math.floor(height / GRID_SIZE);
+
+        if (newCols !== COLS || newRows !== ROWS) {
+          // Reset simulation with new dimensions
+          location.reload(); // Simple approach for resize
+        }
+      }
+    });
+
+    // Animation loop
+    function animate() {
+      simulateStep();
+      render();
+      requestAnimationFrame(animate);
+    }
+
+    // Start the simulation
+    animate();
+  }
 </script>

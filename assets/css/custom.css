@@ -117,3 +117,173 @@ div.prose:nth-child(2) {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   pointer-events: none;
 }
+
+/* Ensure the container remains a positioned element and captures mouse events */
+.home-section-bg.bg-image.parallax {
+  position: absolute;
+  overflow: hidden;
+  z-index: -2;
+  /* Behind the canvas */
+  filter: blur(10px) brightness(1) !important;
+  /* Apply blur and brightness */
+}
+
+/* Container for capturing mouse events over the entire hero area */
+.hero-mouse-area {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  /* Capture mouse events */
+}
+
+/* Style the fluid simulation canvas */
+#fluidCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Behind everything except the background */
+  pointer-events: none;
+  /* Allow interactions to pass through to content */
+  background-color: transparent;
+}
+
+/* Simulation controls panel */
+.simulation-controls {
+  position: absolute;
+  /* Changed from absolute to fixed */
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255,
+      255,
+      255,
+      0.95);
+  /* Light background with high opacity */
+  color: #333;
+  /* Dark text for contrast */
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  z-index: 9999;
+  /* Much higher z-index */
+  min-width: 200px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  /* Softer shadow for light theme */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* Subtle border */
+  font-family: monospace;
+  transition: opacity 0.3s ease;
+  pointer-events: auto;
+  /* Ensure it can be interacted with */
+}
+
+.simulation-controls:hover {
+  opacity: 1;
+}
+
+.simulation-controls h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.9rem;
+  color: #2563eb;
+  /* Blue color for light theme */
+  text-align: center;
+}
+
+.control-group {
+  margin-bottom: 0.75rem;
+}
+
+.control-group:last-child {
+  margin-bottom: 0;
+}
+
+.control-label {
+  display: block;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: #555;
+  /* Darker gray for light theme */
+}
+
+.control-slider {
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: #e5e7eb;
+  /* Light gray background */
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.control-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2563eb;
+  /* Blue for light theme */
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.control-slider::-webkit-slider-thumb:hover {
+  background: #1d4ed8;
+  /* Darker blue on hover */
+}
+
+.control-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2563eb;
+  /* Blue for light theme */
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.control-slider::-moz-range-thumb:hover {
+  background: #1d4ed8;
+  /* Darker blue on hover */
+}
+
+.control-value {
+  font-size: 0.7rem;
+  color: #2563eb;
+  /* Blue for light theme */
+  float: right;
+  margin-top: -0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  #fluidCanvas {
+    display: none;
+    /* Hide simulation on mobile for performance */
+  }
+
+  .simulation-controls {
+    display: none;
+    /* Hide controls on mobile */
+  }
+}
+
+/* Ensure proper layering for hero content */
+
+/* Custom cursor for fluid interaction area */
+.hero-mouse-area:hover {
+  cursor: crosshair;
+}
+
+/* Optional: Add some styling for the ocean theme */
+.hero-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
