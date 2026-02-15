@@ -11,7 +11,7 @@
 }
 
 .dark .avatar-emoji {
-  background-color: #000000;
+  background-color: rgba(167, 78, 78, 1);
 }
 
 div.prose:nth-child(2) {
@@ -79,13 +79,13 @@ div.prose:nth-child(2) {
 .bio-text>p:nth-child(2) {
   text-align: justify;
   font-style: bold;
-  color: rgb(0, 0, 0);
+  color: rgba(167, 78, 78, 1);
   font-weight: 599;
 }
 
 :is(.dark .dark\:text-gray-300) {
   --tw-text-opacity: 1;
-  color: rgb(0, 0, 0);
+  color: rgba(167, 78, 78, 1);
 }
 
 .bg-image {
@@ -101,16 +101,6 @@ div.prose:nth-child(2) {
     text-align: justify;
   }
 }
-
-
-
-#section-resume-biography-3 {
-  border-bottom-color: black;
-  border-bottom-width: 3px;
-  border-top-color: black;
-  border-top-width: 3px;
-}
-
 
 
 /* Ensure the container remains a positioned element and captures mouse events */
