@@ -2,6 +2,10 @@
   background-color: rgba(167, 78, 78, 1);
 }
 
+.avatar-wrapper {
+  height: 200px;
+}
+
 :is(.dark .dark\:text-white) {
   color: rgba(167, 78, 78, 1);
 }
