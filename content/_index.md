@@ -20,7 +20,7 @@ sections:
         color: white
         image:
           # Add your image background to `assets/media/`.
-          filename: back6.jpg
+          filename: back6.png
           size: cover
           position: center
           parallax: false
