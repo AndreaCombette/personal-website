@@ -2,8 +2,9 @@
   background-color: rgba(167, 78, 78, 1);
 }
 
-.home-section-bg {
-  width: 180%;
+.avatar-wrapper {
+  margin-top: 75px;
+  margin-bottom: 50px;
 }
 
 :is(.dark .dark\:text-white) {
