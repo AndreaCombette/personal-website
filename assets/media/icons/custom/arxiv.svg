@@ -3,8 +3,8 @@
    id="logomark"
    viewBox="0 0 17.732 24.269"
    version="1.1"
-   sodipodi:docname="arxiv-logomark-small.svg"
-   inkscape:version="1.4 (1:1.4+202410161351+e7c3feb100)"
+   sodipodi:docname="arxiv.svg"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -20,13 +20,13 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="33.334708"
-     inkscape:cx="8.8646344"
-     inkscape:cy="12.1345"
-     inkscape:window-width="1900"
-     inkscape:window-height="991"
-     inkscape:window-x="12"
-     inkscape:window-y="10"
+     inkscape:zoom="28.297384"
+     inkscape:cx="7.615545"
+     inkscape:cy="12.262618"
+     inkscape:window-width="1512"
+     inkscape:window-height="921"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
      inkscape:window-maximized="0"
      inkscape:current-layer="tiny" />
   <g
@@ -36,7 +36,7 @@
        transform="translate(-566.984 -271.548)"
        fill="#bdb9b4"
        id="path1"
-       style="fill:#ffffff;fill-opacity:1" />
+       style="fill:#717171;fill-opacity:1" />
     <path
        d="M579.525,282.225l-10.606-10.174a1.413,1.413,0,0,0-.834-.5,1.09,1.09,0,0,0-1.027.66c-.167.4-.047.681.319,1.206l8.44,10.242h0l-6.282,7.716a1.336,1.336,0,0,0-.323,1.3,1.114,1.114,0,0,0,1.04.69A.992.992,0,0,0,571,293l8.519-7.92A1.924,1.924,0,0,0,579.525,282.225Z"
        transform="translate(-566.984 -271.548)"
@@ -47,6 +47,6 @@
        transform="translate(-566.984 -271.548)"
        fill="#bdb9b4"
        id="path3"
-       style="fill:#ffffff;fill-opacity:1" />
+       style="fill:#717171;fill-opacity:1" />
   </g>
 </svg>

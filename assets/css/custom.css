@@ -2,6 +2,14 @@
   background-color: rgb(0, 0, 0);
 }
 
+:is(.dark .dark\:text-white) {
+  color: rgba(167, 78, 78, 1);
+}
+
+:is(.dark .dark\:text-zinc-100) {
+  color: rgba(167, 78, 78, 1);
+}
+
 .dark .avatar-emoji {
   background-color: #000000;
 }
