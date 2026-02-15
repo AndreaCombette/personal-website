@@ -14,6 +14,11 @@
   background-color: rgba(167, 78, 78, 1);
 }
 
+#section-resume-bibliography {
+  border-bottom-color: rgba(0, 0, 0, 1);
+  border-width: thin;
+}
+
 div.prose:nth-child(2) {
   /* font-style: oblique 0deg; */
   text-align: justify;
