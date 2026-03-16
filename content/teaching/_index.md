@@ -14,20 +14,22 @@ sections:
     id: teaching
     content:
       title: Teaching
+      text: ""
       filters:
         folders:
           - teaching
     design:
       view: article-grid
       columns: 2
-  - block: markdown
-    content:
-      title: "Lecture files"
-      subtitle: ""
-      text: |-
-        Download course material below:
 
-        - {{< icon name="code" pack="fas" >}} [Shallow Water Tutorial (Jupyter Notebook)](/uploads/teaching/CFD/tutorials/ShallowWaterTutorial.ipynb)
+  - block: markdown
+    id: resources
+    content:
+      title: Downloadable material
+      subtitle: Exercise sheets, notes, and solutions
+      text: |-
+        ### Computational Method For Geophsyics and Astronomy
+        - <i class="fa-solid fa-code"></i>[Exercise Sheet 1](/static/uploads/teaching/CFD/tutorials/ShallowWaterTutorial.ipynb)
     design:
       columns: "1"
 ---
