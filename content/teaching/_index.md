@@ -10,17 +10,15 @@ cascade:
       show_breadcrumb: true
 
 sections:
-
   - block: markdown
     id: resources
     content:
       title: 📚
       subtitle: Exercise sheets, notes, and solutions
       text: |-
-        ## Méthodes numériques pour la dynamique des fluides, M1 ENS Lyon
+        <h2 style="text-align: center;">Méthodes numériques pour la dynamique des fluides, M1 ENS Lyon</h2>
 
-        - <a href="/uploads/teaching/CFD/tutorials/ShallowWaterTutorial.ipynb" download> Exercise Sheet 1 ✏️ </a>
-
+        - <a href="/uploads/teaching/CFD/tutorials/ShallowWaterTutorial.ipynb" download>Exercise Sheet 1 ✏️</a>
     design:
       columns: "1"
 ---
