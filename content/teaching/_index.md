@@ -17,8 +17,8 @@ sections:
       title: Teaching
       subtitle: Exercise sheets, notes, and solutions
       text: |-
-        ### CFD
-        <i class="fas fa-file-pdf"></i>[Exercise Sheet 1](/uploads/teaching/CFD/tutorials/ShallowWaterTutorial.ipynb)
+        ## Numerical Methods for Geophysics and Astronomy
+        <i class="fa-solid fa-code"></i>[Exercise Sheet 1](/uploads/teaching/CFD/tutorials/ShallowWaterTutorial.ipynb)
     design:
       columns: "1"
 ---
