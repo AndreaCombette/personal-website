@@ -18,7 +18,9 @@ sections:
       subtitle: Exercise sheets, notes, and solutions
       text: |-
         ## Introduction aux méthodes numériques pour la dynamique des fluides, M1 ENS Lyon
-        - [Exercise Sheet 1 📁](/uploads/teaching/CFD/tutorials/ShallowWaterTutorial.ipynb)
+
+        - <a href="/uploads/teaching/CFD/tutorials/ShallowWaterTutorial.ipynb" download> Download notebook 1 Exercise Sheet 1 📁</a>
+
     design:
       columns: "1"
 ---
