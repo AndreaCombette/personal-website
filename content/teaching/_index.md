@@ -18,6 +18,8 @@ sections:
       subtitle: Exercise sheets, notes, and solutions
       text: |-
         ## Numerical Methods for Geophysics and Astronomy
+
+        ### Tutorial nº1
         <i class="fa-solid fa-code"></i>[Exercise Sheet 1](/uploads/teaching/CFD/tutorials/ShallowWaterTutorial.ipynb)
     design:
       columns: "1"
