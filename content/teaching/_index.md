@@ -22,12 +22,12 @@ sections:
       columns: 2
   - block: markdown
     content:
-      title: "📚"
+      title: "Lecture files"
       subtitle: ""
       text: |-
-        Waiting for this
+        Download course material below:
+
+        - {{< icon name="code" pack="fas" >}} [Shallow Water Tutorial (Jupyter Notebook)](/uploads/teaching/CFD/tutorials/ShallowWaterTutorial.ipynb)
     design:
       columns: "1"
 ---
-
-Waiting for this
